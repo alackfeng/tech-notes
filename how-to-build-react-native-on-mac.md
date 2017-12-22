@@ -33,7 +33,7 @@ AppStore install
 
 react-native init AwesomeProject
 
+cd AwesomeProject/
 
-
-
+react-native run-ios
 
