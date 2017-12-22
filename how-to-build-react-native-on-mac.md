@@ -8,9 +8,12 @@
 
 * HomeBrew：
 
-/usr/bin/ruby -e "$\(curl -fsSL [https://raw.githubusercontent.com/Homebrew/install/master/install\](https://raw.githubusercontent.com/Homebrew/install/master/install\)\)"
+/usr/bin/ruby -e "$\(curl -fsSL [https://raw.githubusercontent.com/Homebrew/install/master/install\](https://raw.githubusercontent.com/Homebrew/install/master/install%29\)"
 
 * Node：
+
+brew install node
+
 * 
 * 
 
