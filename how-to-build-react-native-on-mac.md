@@ -43,5 +43,5 @@ A1. 安装xcode并执行 .  sudo xcode-select -s /Applications/Xcode.app/Content
 
 Q2. 'boost/iterator/iterator\_adaptor.hpp' file not found
 
-A2. 
+A2. yarn upgrade
 
