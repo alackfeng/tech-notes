@@ -18,7 +18,15 @@ brew install node
 
 npm install -g yarn react-native-cli
 
-* 
+* Watchman  
+  brew install watchman
+
+* Flow
+
+brew install flow
+
+* Xcode
+
 * 
 
 
