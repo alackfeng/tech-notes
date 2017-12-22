@@ -39,9 +39,5 @@ react-native run-ios
 
 Q1. xcrun: error: unable to find utility "instruments", not a developer tool or in PATH
 
-A1. sudo xcode-select -s /Applications/Xcode.app/Contents/Developer/
-
-
-
-
+A1. 安装xcode并执行 .  sudo xcode-select -s /Applications/Xcode.app/Contents/Developer/
 
