@@ -28,6 +28,8 @@ brew install flow
 
 * Xcode
 
+AppStore install
+
 * 
 
 
