@@ -31,11 +31,7 @@ AppStore install
 
 ### 测试安装
 
-### 
-
-
-
-
+react-native init AwesomeProject
 
 
 
