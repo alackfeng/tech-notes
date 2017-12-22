@@ -14,7 +14,9 @@
 
 brew install node
 
-* #### Yarn、React Native的命令行工具（react-native-cli）
+* Yarn、React Native的命令行工具（react-native-cli）
+
+* 
 * 
 
 
