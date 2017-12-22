@@ -1,10 +1,9 @@
-环境搭建
+### 环境搭建
 
-* target os: ios
-
+* ### target os: ios
 * develop platform: macOS
 
-依赖软件：
+### 依赖软件：
 
 * HomeBrew：
 
@@ -30,6 +29,15 @@ brew install flow
 
 AppStore install
 
-* 
+### 测试安装
+
+### 
+
+
+
+
+
+
+
 
 
