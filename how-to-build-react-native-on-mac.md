@@ -41,3 +41,7 @@ Q1. xcrun: error: unable to find utility "instruments", not a developer tool or 
 
 A1. 安装xcode并执行 .  sudo xcode-select -s /Applications/Xcode.app/Contents/Developer/
 
+Q2. 'boost/iterator/iterator\_adaptor.hpp' file not found
+
+A2. 
+
