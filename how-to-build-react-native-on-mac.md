@@ -45,3 +45,11 @@ Q2. 'boost/iterator/iterator\_adaptor.hpp' file not found
 
 A2. yarn upgrade react-native upgrade
 
+Q3. no bundle url present
+
+A3. 取消本机的全局代理模式即可，网络路由问题
+
+
+
+
+
