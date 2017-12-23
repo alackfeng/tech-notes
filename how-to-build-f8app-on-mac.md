@@ -48,5 +48,7 @@ _Make sure the files are in_`~/Documents/FacebookSDK/`
 
 yarn config set proxy [http://192.168.1.12:8888](http://192.168.1.12:8888)
 
-yarn config set https-proxy http://192.168.1.12:8888
+yarn config set https-proxy [http://192.168.1.12:8888](http://192.168.1.12:8888)
+
+
 
