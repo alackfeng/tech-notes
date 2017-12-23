@@ -46,7 +46,9 @@ _Make sure the files are in_`~/Documents/FacebookSDK/`
 
 运行APP
 
+yarn
 
+yarn ios
 
 
 
