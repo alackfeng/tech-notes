@@ -54,7 +54,7 @@ yarn config set proxy [http://192.168.1.12:8888](http://192.168.1.12:8888)
 
 yarn config set https-proxy [http://192.168.1.12:8888](http://192.168.1.12:8888)
 
-set HTTP\_PROXY="http://192.168.1.12:8888"
+export HTTP\_PROXY="[http://192.168.1.12:8888](http://192.168.1.12:8888)"
 
-set HTTPS\_PROXY="http://192.168.1.12:8888"
+export HTTPS\_PROXY="[http://192.168.1.12:8888](http://192.168.1.12:8888)"
 
