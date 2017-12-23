@@ -34,11 +34,11 @@ _Make sure to install the SDK and build tools for API level 23 \(see_[_here_](ht
 
 Facebook SDK \([iOS](https://developers.facebook.com/docs/ios/)\), for building Facebook functionality into the app.
 
-wget https://origincache.facebook.com/developers/resources/?id=facebook-ios-sdk-current.zip
+wget [https://origincache.facebook.com/developers/resources/?id=facebook-ios-sdk-current.zip](https://origincache.facebook.com/developers/resources/?id=facebook-ios-sdk-current.zip)
 
 mv FacebookSDKs-iOS-4.29.0 ~/Documents/
 
-mv FacebookSDKs-iOS-4.29.0/FacebookSDK
+mv FacebookSDKs-iOS-4.29.0/ FacebookSDK
 
 ls -ltr ~/Documents/FacebookSDK
 
