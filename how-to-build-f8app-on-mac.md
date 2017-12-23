@@ -10,6 +10,8 @@ cd f8app
 
 [Yarn](https://yarnpkg.com/en/docs/install), for installing the NPM dependencies and running helper scripts.
 
+npm install -g yarn
+
 [Watchman](https://facebook.github.io/watchman/docs/install.html), for the React Native packager to automatically detect your changes.
 
 [Docker](https://docs.docker.com/engine/installation/), for running the local development server.
