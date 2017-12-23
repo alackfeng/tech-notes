@@ -18,6 +18,8 @@ brew install watchman
 
 [Docker](https://docs.docker.com/engine/installation/), for running the local development server.
 
+brew cask install docker
+
 [Docker Compose](https://docs.docker.com/compose/install/), for running the local development server \(included with Docker for Mac and Windows\).
 
 ### Android
