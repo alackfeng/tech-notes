@@ -52,6 +52,8 @@ yarn ios
 
 
 
+-------
+
 代理配置：
 
 git config --global http.proxy [http://192.168.1.12:8888](http://192.168.1.12:8888)
