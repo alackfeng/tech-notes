@@ -1,18 +1,12 @@
-
-
-
-
 1. 下载源码
 
-git clone https://github.com/fbsamples/f8app.git
+git clone [https://github.com/fbsamples/f8app.git](https://github.com/fbsamples/f8app.git)
 
 cd f8app
 
-
-
 ## 安装依赖
 
-## All platforms
+## 全平台
 
 [Yarn](https://yarnpkg.com/en/docs/install), for installing the NPM dependencies and running helper scripts.
 
@@ -34,7 +28,5 @@ _Make sure to install the SDK and build tools for API level 23 \(see_[_here_](ht
 
 Facebook SDK \([iOS](https://developers.facebook.com/docs/ios/)\), for building Facebook functionality into the app.
 
-_Make sure the files are in`~/Documents/FacebookSDK/`_
-
-
+_Make sure the files are in_`~/Documents/FacebookSDK/`
 
