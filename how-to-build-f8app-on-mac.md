@@ -14,7 +14,7 @@ npm install -g yarn
 
 [Watchman](https://facebook.github.io/watchman/docs/install.html), for the React Native packager to automatically detect your changes.
 
-
+brew install watchman
 
 [Docker](https://docs.docker.com/engine/installation/), for running the local development server.
 
