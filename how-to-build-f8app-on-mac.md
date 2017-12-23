@@ -44,3 +44,17 @@ ls -ltr ~/Documents/FacebookSDK
 
 _Make sure the files are in_`~/Documents/FacebookSDK/`
 
+
+
+
+
+
+
+代理配置：
+
+yarn config set proxy http://192.168.1.12:8888
+
+
+
+
+
