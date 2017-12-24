@@ -50,9 +50,7 @@ yarn
 
 yarn ios
 
-
-
--------
+---
 
 代理配置：
 
@@ -67,4 +65,12 @@ yarn config set https-proxy [http://192.168.1.12:8888](http://192.168.1.12:8888)
 export HTTP\_PROXY="[http://192.168.1.12:8888](http://192.168.1.12:8888)"
 
 export HTTPS\_PROXY="[http://192.168.1.12:8888](http://192.168.1.12:8888)"
+
+
+
+
+
+https://f8-app.liaohuqiu.net/\#content
+
+
 
