@@ -31,7 +31,7 @@ AppStore install
 
 Android环境安装：
 
-> jdk8： 
+> jdk8：
 >
 > brew tap caskroom/versions
 >
