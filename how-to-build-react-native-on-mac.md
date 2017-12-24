@@ -29,13 +29,15 @@ brew install flow
 
 AppStore install
 
-
-
 Android环境安装：
 
-
-
-
+> jdk8： 
+>
+> brew tap caskroom/versions
+>
+> brew cask search java8
+>
+> brew cask install java8
 
 ### 测试安装
 
