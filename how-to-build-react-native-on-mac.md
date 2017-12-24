@@ -38,6 +38,8 @@ Android环境安装：
 > brew cask search java8
 >
 > brew cask install java8
+>
+> javac -version
 
 ### 测试安装
 
