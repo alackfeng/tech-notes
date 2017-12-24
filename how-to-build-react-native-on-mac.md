@@ -45,7 +45,7 @@ Android环境安装：
 >
 > wget [https://developer.android.com/studio/index.html\#mac-bundle](https://developer.android.com/studio/index.html#mac-bundle)
 >
-> **env：**
+> **env：vi ~/.bash\_profile**
 >
 > export ANDROID\_HOME=$HOME/Library/Android/sdk
 >
