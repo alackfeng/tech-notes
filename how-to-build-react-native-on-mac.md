@@ -55,7 +55,7 @@ Android环境安装：
 
 ### 测试安装
 
-react-native init AwesomeProject
+react-native init AwesomeProject   \#react-native init AwesomeProject --version 0.39.2
 
 cd AwesomeProject/
 
