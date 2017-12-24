@@ -29,6 +29,14 @@ brew install flow
 
 AppStore install
 
+
+
+Android环境安装：
+
+
+
+
+
 ### 测试安装
 
 react-native init AwesomeProject
@@ -48,8 +56,4 @@ A2. yarn upgrade react-native upgrade
 Q3. no bundle url present
 
 A3. 取消本机的全局代理模式即可，网络路由问题
-
-
-
-
 
