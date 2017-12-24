@@ -31,7 +31,7 @@ AppStore install
 
 Android环境安装：
 
-> jdk8：
+> **jdk8：**
 >
 > brew tap caskroom/versions
 >
@@ -40,6 +40,10 @@ Android环境安装：
 > brew cask install java8
 >
 > javac -version
+>
+> **android-studio:**
+>
+> wget https://developer.android.com/studio/index.html\#mac-bundle
 
 ### 测试安装
 
