@@ -77,5 +77,7 @@ A3. 取消本机的全局代理模式即可，网络路由问题
 
 Q4. React Native unable to load script from assets index.android.bundle
 
-A4. react-native bundle --platform android --dev false --entry-file index.js --bundle-output android/app/src/main/assets/index.android.bundle --assets-dest
+A4. mkdir -p android/app/src/main/assets;
+
+react-native bundle --platform android --dev false --entry-file index.js --bundle-output android/app/src/main/assets/index.android.bundle --assets-dest
 
