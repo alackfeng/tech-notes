@@ -61,8 +61,6 @@ cd AwesomeProject/
 
 react-native run-ios
 
-
-
 ### 遇到问题：
 
 ### Q1. xcrun: error: unable to find utility "instruments", not a developer tool or in PATH
@@ -76,4 +74,8 @@ A2. yarn upgrade react-native upgrade
 Q3. no bundle url present
 
 A3. 取消本机的全局代理模式即可，网络路由问题
+
+Q4. React Native unable to load script from assets index.android.bundle
+
+A4. 
 
