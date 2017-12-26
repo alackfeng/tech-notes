@@ -45,6 +45,8 @@ gulp run ios
 
 
 
+遇到问题：
+
 Q1. react-native-xcode.sh: No such file or directory
 
 A1.
