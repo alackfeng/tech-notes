@@ -6,9 +6,16 @@
 
 项目动机：[https://medium.com/@chulcher/better-apps-by-default-f5a77ca4b9fb](https://medium.com/@chulcher/better-apps-by-default-f5a77ca4b9fb)
 
-
-
 编译安装：
+
+```
+mkdir -p ~/source/code/cross-platform-app
+cd ~/source/code/cross-platform-app
+git clone https://github.com/c-h-/universal-native-boilerplate.git cross-platform-app
+cd cross-platform-app
+npm install
+npm run setup # initializes a new git repository
+```
 
 
 
