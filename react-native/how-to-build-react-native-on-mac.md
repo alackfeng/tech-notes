@@ -66,6 +66,8 @@ react-native run-ios
 ```
 vi /Users/taurusfeng/source/code/TarotApp/android/app/build.gradle =>
 entryFile: "index.android.js"
+
+
 ```
 
 ### 遇到问题：
