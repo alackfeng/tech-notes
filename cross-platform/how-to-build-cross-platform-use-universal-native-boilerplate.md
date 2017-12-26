@@ -6,3 +6,9 @@
 
 项目动机：[https://medium.com/@chulcher/better-apps-by-default-f5a77ca4b9fb](https://medium.com/@chulcher/better-apps-by-default-f5a77ca4b9fb)
 
+
+
+编译安装：
+
+
+
