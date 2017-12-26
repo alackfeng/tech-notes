@@ -49,7 +49,6 @@ gulp run ios
 
 ```
 Q1. ../node_modules/react-native/packager/react-native-xcode.sh: No such file or directory
-
 A1.
 ```
 
