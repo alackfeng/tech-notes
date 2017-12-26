@@ -35,5 +35,15 @@ gulp run android -p # Run production
 gulp analyze web
 ```
 
+IOS平台试水：
+
+
+
+Q1. react-native-xcode.sh: No such file or directory
+
+A1. 
+
+
+
 
 
