@@ -1,4 +1,6 @@
-### 寻求一个跨平台编译环境
+```
+寻求一个跨平台编译环境
+```
 
 ### [https://github.com/c-h-/universal-native-boilerplate](https://github.com/c-h-/universal-native-boilerplate)
 
@@ -43,11 +45,12 @@ gulp build ios
 gulp run ios
 ```
 
-
-
 遇到问题：
 
+```
 Q1. react-native-xcode.sh: No such file or directory
-
 A1.
+```
+
+
 
