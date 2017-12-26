@@ -18,4 +18,5 @@
 
 * [how-to-code-styles-your-reactjs](react-native/how-to-code-styles-your-reactjs.md)
 * [how-to-build-react-native-on-mac](react-native/how-to-build-react-native-on-mac.md)
+* [how-to-build-f8app-on-mac](react-native/how-to-build-f8app-on-mac.md)
 
