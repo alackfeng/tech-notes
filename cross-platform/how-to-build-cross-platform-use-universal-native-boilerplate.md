@@ -63,7 +63,7 @@ Consult IDE log for more details (Help | Show Log)
 A2. https://developer.android.com/studio/build/gradle-plugin-3-0-0-migration.html
 
 Q3. Print: Entry, ":CFBundleIdentifier", Does Not Exist
-A3. 
+A3.
 ```
 
 
