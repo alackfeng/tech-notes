@@ -37,13 +37,15 @@ gulp analyze web
 
 IOS平台试水：
 
+```
+gulp enable ios
+gulp build ios
+gulp run ios
+```
+
 
 
 Q1. react-native-xcode.sh: No such file or directory
 
-A1. 
-
-
-
-
+A1.
 
