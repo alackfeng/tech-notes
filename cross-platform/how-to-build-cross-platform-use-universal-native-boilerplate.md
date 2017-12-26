@@ -9,12 +9,12 @@
 编译安装：
 
 ```
-mkdir -p ~/source/code/cross-platform-app
+ mkdir -p ~/source/code/cross-platform-app
  cd ~/source/code/cross-platform-app
-git clone https://github.com/c-h-/universal-native-boilerplate.git cross-platform-app
-cd cross-platform-app
-npm install
-npm run setup # initializes a new git repository
+ git clone https://github.com/c-h-/universal-native-boilerplate.git cross-platform-app
+ cd cross-platform-app
+ npm install
+ npm run setup # initializes a new git repository
 ```
 
 
