@@ -61,6 +61,15 @@ cd AwesomeProject/
 
 react-native run-ios
 
+### 修改入口文件：
+
+```
+vi /Users/taurusfeng/source/code/TarotApp/android/app/build.gradle 
+
+```
+
+
+
 ### 遇到问题：
 
 ### Q1. xcrun: error: unable to find utility "instruments", not a developer tool or in PATH
