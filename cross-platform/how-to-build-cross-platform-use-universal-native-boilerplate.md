@@ -52,6 +52,15 @@ Q1. ../node_modules/react-native/packager/react-native-xcode.sh: No such file or
 A1. xcode => Build Phases > Bundle React Native code and images
 => export NODE_BINARY=node
 ../node_modules/react-native/scripts/react-native-xcode.sh
+
+Q2. Error:Unsupported method: BaseConfig.getApplicationIdSuffix().
+The version of Gradle you connect to does not support that method.
+To resolve the problem you can change/upgrade the target version of Gradle you connect to.
+Alternatively, you can ignore this exception and read other information from the model.
+
+Consult IDE log for more details (Help | Show Log)
+
+A2. 
 ```
 
 
