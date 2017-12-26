@@ -64,11 +64,9 @@ react-native run-ios
 ### 修改入口文件：
 
 ```
-vi /Users/taurusfeng/source/code/TarotApp/android/app/build.gradle 
-
+vi /Users/taurusfeng/source/code/TarotApp/android/app/build.gradle =>
+entryFile: "index.android.js"
 ```
-
-
 
 ### 遇到问题：
 
