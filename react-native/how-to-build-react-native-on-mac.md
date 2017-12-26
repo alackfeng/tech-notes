@@ -66,10 +66,10 @@ react-native run-ios
 ```
 vi /Users/taurusfeng/source/code/TarotApp/android/app/build.gradle =>
 entryFile: "index.android.js"
-vi /Users/taurusfeng/source/code/TarotApp/android/app/src/main/java/com/tarotapp/MainApplication.java
-      String getJSMainModuleName() {
-            return "index.android";
-      }
+vi /Users/taurusfeng/source/code/TarotApp/android/app/src/main/java/com/tarotapp/MainApplication.java =>
+String getJSMainModuleName() {
+    return "index.android";
+}
 
 vi /Users/taurusfeng/source/code/TarotApp/ios/TarotApp/AppDelegate.m =>
 jsBundleURLForBundleRoot:@"index.ios"
