@@ -17,5 +17,23 @@
  npm run setup # initializes a new git repository
 ```
 
+常见命令：
+
+```
+# Enable a platform or feature
+gulp enable windows
+
+# Build a platform
+gulp build android # Build debug
+gulp build android --production # Build a production version
+
+# Run a platform
+gulp run ios # Run debug
+gulp run android -p # Run production
+
+# Analyse bundle contents, load speed, and usability
+gulp analyze web
+```
+
 
 
