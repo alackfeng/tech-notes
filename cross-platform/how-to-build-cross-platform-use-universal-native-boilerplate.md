@@ -50,7 +50,8 @@ gulp run ios
 ```
 Q1. ../node_modules/react-native/packager/react-native-xcode.sh: No such file or directory
 A1. xcode => Build Phases > Bundle React Native code and images
-=> 
+=> export NODE_BINARY=node
+../node_modules/react-native/scripts/react-native-xcode.sh
 ```
 
 
