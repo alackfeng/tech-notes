@@ -67,6 +67,7 @@ react-native run-ios
 vi /Users/taurusfeng/source/code/TarotApp/android/app/build.gradle =>
 entryFile: "index.android.js"
 
+vi /Users/taurusfeng/source/code/TarotApp/ios/TarotApp/AppDelegate.m =>
 
 ```
 
