@@ -6,6 +6,7 @@
 ## cross-platform
 
 * [how-to-build-cross-platform-use-universal-native-boilerplate](cross-platform/how-to-build-cross-platform-use-universal-native-boilerplate.md)
+* [how-to-use](cross-platform/how-to-use.md)
 
 ## react-native-
 
