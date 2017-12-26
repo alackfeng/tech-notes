@@ -61,6 +61,8 @@ Alternatively, you can ignore this exception and read other information from the
 Consult IDE log for more details (Help | Show Log)
 
 A2. https://developer.android.com/studio/build/gradle-plugin-3-0-0-migration.html
+
+
 ```
 
 
