@@ -22,6 +22,11 @@ yarn add --dev babel-loader url-loader babel-preset-react babel-preset-es2015
 
 
 
-  
+### 扩展：
+
+```
+yarn add --dev babel-plugin-transform-runtime
+```
+
 
 
