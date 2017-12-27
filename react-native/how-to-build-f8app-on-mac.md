@@ -54,17 +54,17 @@ yarn ios
 
 代理配置：
 
-git config --global http.proxy [http://192.168.1.12:8888](http://192.168.1.12:8888)
+git config --global http.proxy [http://](http://192.168.1.12:8888)127.0.0.1:51589
 
-git config --global https.proxy [http://192.168.1.12:8888](http://192.168.1.12:8888)
+git config --global https.proxy [http://](http://192.168.1.12:8888)127.0.0.1:51589
 
-yarn config set proxy [http://192.168.1.12:8888](http://192.168.1.12:8888)
+yarn config set proxy [http://](http://192.168.1.12:8888)127.0.0.1:51589
 
-yarn config set https-proxy [http://192.168.1.12:8888](http://192.168.1.12:8888)
+yarn config set https-proxy [http://](http://192.168.1.12:8888)127.0.0.1:51589
 
-export HTTP\_PROXY="[http://192.168.1.12:8888](http://192.168.1.12:8888)"
+export HTTP\_PROXY="[http://](http://192.168.1.12:8888)127.0.0.1:51589"
 
-export HTTPS\_PROXY="[http://192.168.1.12:8888](http://192.168.1.12:8888)"
+export HTTPS\_PROXY="[http://](http://192.168.1.12:8888)127.0.0.1:51589"
 
 [https://f8-app.liaohuqiu.net/\#content](https://f8-app.liaohuqiu.net/#content)
 
