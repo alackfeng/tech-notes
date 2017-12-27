@@ -6,6 +6,8 @@
 yarn add react react-dom react-native-web
 yarn add --dev webpack webpack-dev-server
 yarn add --dev babel-loader url-loader babel-preset-react babel-preset-es2015
+yarn add --dev babel-cli babel-core babel-loader babel-preset-es2015 babel-preset-react babel-preset-stage-0 
+yarn add --dev babel-plugin-transform-react-remove-prop-types babel-plugin-transform-react-constant-elements babel-plugin-transform-react-inline-elements babel-plugin-array-includes
 ```
 
 ### 配置 WEBPACK.CONFIG.JS
