@@ -20,11 +20,10 @@ yarn add --dev babel-loader url-loader babel-preset-react babel-preset-es2015
 ./node_modules/.bin/webpack -p --config ./web/webpack.config.js
 ```
 
-
-
 ### 扩展：
 
 ```
+yarn add babel-runtime
 yarn add --dev babel-plugin-transform-runtime
 ```
 
