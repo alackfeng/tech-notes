@@ -4,8 +4,8 @@
 
 ```
 yarn add react react-dom react-native-web
-yarn add --dev babel-loader url-loader webpack webpack-dev-server
-
+yarn add --dev webpack webpack-dev-server
+yarn add --dev babel-loader url-loader babel-preset-react babel-preset-es2015
 ```
 
 
