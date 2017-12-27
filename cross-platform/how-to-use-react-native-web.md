@@ -12,3 +12,15 @@ yarn add --dev babel-loader url-loader babel-preset-react babel-preset-es2015
 
 
 
+运行
+
+```
+.
+```
+
+```
+./node_modules/.bin/webpack-dev-server -d --config ./web/webpack.config.js --inline --hot --colors
+```
+
+
+
