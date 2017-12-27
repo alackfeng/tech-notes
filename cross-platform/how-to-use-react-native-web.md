@@ -8,5 +8,7 @@ yarn add --dev webpack webpack-dev-server
 yarn add --dev babel-loader url-loader babel-preset-react babel-preset-es2015
 ```
 
+### 配置 WEBPACK.CONFIG.JS
+
 
 
