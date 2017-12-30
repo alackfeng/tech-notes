@@ -50,14 +50,15 @@ yarn server
 
 yarn
 
-yarn ios  
-
+yarn ios
 
 ---
 
 相关技术点：
 
 [https://f8-app.liaohuqiu.net/tutorials/building-the-f8-app/planning/](https://f8-app.liaohuqiu.net/tutorials/building-the-f8-app/planning/)
+
+
 
 ---
 
