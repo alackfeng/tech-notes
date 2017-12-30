@@ -1,8 +1,4 @@
-https://f8-app.liaohuqiu.net/tutorials/building-the-f8-app/planning/
-
-
-
-
+[https://f8-app.liaohuqiu.net/tutorials/building-the-f8-app/planning/](https://f8-app.liaohuqiu.net/tutorials/building-the-f8-app/planning/)
 
 下载源码
 
@@ -63,6 +59,8 @@ yarn ios
 相关技术点：
 
 [https://f8-app.liaohuqiu.net/tutorials/building-the-f8-app/planning/](https://f8-app.liaohuqiu.net/tutorials/building-the-f8-app/planning/)
+
+
 
 ---
 
