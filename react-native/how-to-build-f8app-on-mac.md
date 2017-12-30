@@ -60,7 +60,13 @@ yarn ios
 
 [https://f8-app.liaohuqiu.net/tutorials/building-the-f8-app/planning/](https://f8-app.liaohuqiu.net/tutorials/building-the-f8-app/planning/)
 
+数据存储：Parse Server
 
+错误检测：Flow
+
+单元测试：Jest
+
+app数据后端  Parse Server  and Parse Dashboard
 
 ---
 
