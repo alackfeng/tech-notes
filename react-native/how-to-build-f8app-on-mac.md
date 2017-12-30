@@ -1,3 +1,9 @@
+https://f8-app.liaohuqiu.net/tutorials/building-the-f8-app/planning/
+
+
+
+
+
 下载源码
 
 git clone [https://github.com/fbsamples/f8app.git](https://github.com/fbsamples/f8app.git)
@@ -57,8 +63,6 @@ yarn ios
 相关技术点：
 
 [https://f8-app.liaohuqiu.net/tutorials/building-the-f8-app/planning/](https://f8-app.liaohuqiu.net/tutorials/building-the-f8-app/planning/)
-
-
 
 ---
 
