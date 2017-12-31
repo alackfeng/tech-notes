@@ -68,6 +68,14 @@ yarn ios
 
 app数据后端  Parse Server  and Parse Dashboard
 
+
+
+
+
+Q1.  **Connection to http://192.168.1.8.xip.io:8081/debugger-proxy?role=client timed out. Are you running node proxy? If you are running on the device**
+
+A1. 
+
 ---
 
 代理配置：
