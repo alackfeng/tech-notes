@@ -53,7 +53,9 @@ npm install --save redux-logger
 2. 增加启动屏(launch screen)功能，友好于用户(未完成)
    1)APP启动时显示，2)js bundle加载并渲染完成后消失，3)全屏显示，4)显示的内容可配置
 3. 增加Playground测试UI View接口
-4. 增加react-navigation导航支持 
+4. 增加react-navigation导航支持
+5. redux使用 
+6. 
 ```
 
 #### 待完成：
