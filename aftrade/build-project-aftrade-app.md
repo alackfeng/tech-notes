@@ -59,12 +59,6 @@ gulp run web
 npm install --save redux-logger
 ```
 
-#### 待完成：
-
-```
-1.
-```
-
 #### FAQ.
 
 ```
