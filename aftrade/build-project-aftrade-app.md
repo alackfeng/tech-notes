@@ -45,7 +45,7 @@ gulp run web
 npm install --save redux-logger
 ```
 
-#### 增加跨平台storage存储 
+#### 增加跨平台storage存储
 
 #### FAQ.
 
