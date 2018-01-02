@@ -18,5 +18,5 @@
 
 ## aftrade
 
-* build-project-aftrade-app
+* [build-project-aftrade-app](aftrade/build-project-aftrade-app.md)
 
