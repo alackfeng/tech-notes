@@ -14,7 +14,7 @@ android studio  xcode  node  ...
 
 ```
 git clone https://github.com/alackfeng/aftradeapp.git
-
+cd aftradeapp
 ```
 
 
