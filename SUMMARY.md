@@ -16,3 +16,7 @@
 * [how-to-build-react-native-on-mac](react-native/how-to-build-react-native-on-mac.md)
 * [how-to-build-f8app-on-mac](react-native/how-to-build-f8app-on-mac.md)
 
+## aftrade
+
+* build-project-aftrade-app
+
