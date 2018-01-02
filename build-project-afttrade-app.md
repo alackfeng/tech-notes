@@ -26,10 +26,10 @@ gulp enable ios
 gulp build ios
 react-native run-ios --device ##gulp run ios
 
-#android
-gulp enable android
-gulp build android
-gulp run android
+#web
+gulp enable web
+gulp build web
+gulp run web
 ```
 
 
