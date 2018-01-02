@@ -70,7 +70,7 @@ A4. 权限问题-mi5 => 设置 - 更多设置 - 开发者选项 - USB安装
 
 Q5. Failed to create provisioning profile.
 The app ID "org.reactjs.native.example.TarotApp" cannot be registered to your development team. Change your bundle identifier to a unique string to try again.
-A5.  Bundle Identifier => org.reactjs.native.example.TarotApp1
+A5. Bundle Identifier => org.reactjs.native.example.TarotApp1
 ```
 
 
