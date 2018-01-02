@@ -56,7 +56,7 @@ gulp run web
 #### react-navigation导航构建：
 
 ```
-
+1. 分三部分：StackNavigator顶部导航，TabNavigator
 ```
 
 #### 增加日志功能：
