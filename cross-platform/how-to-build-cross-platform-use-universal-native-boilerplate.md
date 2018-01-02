@@ -64,6 +64,9 @@ A2. https://developer.android.com/studio/build/gradle-plugin-3-0-0-migration.htm
 
 Q3. Print: Entry, ":CFBundleIdentifier", Does Not Exist
 A3.
+
+Q4. com.android.ddmlib.InstallException: INSTALL_FAILED_USER_RESTRICTED: Install canceled by user
+A4. 
 ```
 
 
