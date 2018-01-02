@@ -51,6 +51,9 @@ npm install --save redux-logger
 Q1. Uncaught TypeError: Cannot assign to read only property 'exports' of object '#<Object>'
 A1. 因为webpack 2中不允许混用import和module.exports ,
 解决办法就是统一改成ES6的方式编写即可.
+
+Q2.
+A2.
 ```
 
 
