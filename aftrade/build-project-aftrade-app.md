@@ -48,7 +48,7 @@ npm install --save redux-logger
 #### FAQ.
 
 ```
-Q1.
+Q1. Uncaught TypeError: Cannot assign to read only property 'exports' of object '#<Object>'
 A1.
 ```
 
