@@ -45,5 +45,12 @@ gulp run web
 npm install --save redux-logger
 ```
 
+FAQ.
+
+```
+Q1.
+A1.
+```
+
 
 
