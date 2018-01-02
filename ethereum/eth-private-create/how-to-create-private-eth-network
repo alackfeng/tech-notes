@@ -1,0 +1,99 @@
+
+
+
+
+参考： https://omarmetwally.blog/2017/07/25/how-to-create-a-private-ethereum-network/
+
+
+机器：ssh root@192.168.1.5
+
+1. 前提：安装geth程序，并创建运行目录
+
+cd /Users/taurusfeng/source/product
+mkdir -p eth/geth-net/data
+mkdir -p eth/geth-net/source
+
+
+2. 创建创世块 genesis.json, 并初始化bootnode
+
+cd eth/get-net
+vi genesis.json ====>
+<====
+
+初始化bootnode -
+cp -rf /Users/taurusfeng/source/code/go-ethereum/build/bin/ /Users/taurusfeng/source/product/eth/geth-net/bin/
+./bin/geth --datadir=/Users/taurusfeng/source/product/eth/geth-net/data/ init ./genesis.json
+./bin/bootnode --genkey=./data/boot.key
+./bin/bootnode --nodekey=./data/boot.key
+INFO [12-17|09:02:31] UDP listener up                          self=enode://46e1b83f6823ea9a377987e3159bafb020a92c40373afc372a99fc97a4d744fbd2591ae14d991070fff29f934daf9ea82045b728b7f72f50a9f5eac25aa0fffe@[::]:30301
+
+
+3. 启动第一个节点 - 
+./bin/geth --identity "firstnode" --datadir=/Users/taurusfeng/source/product/eth/geth-net/data/ --bootnodes=enode://46e1b83f6823ea9a377987e3159bafb020a92c40373afc372a99fc97a4d744fbd2591ae14d991070fff29f934daf9ea82045b728b7f72f50a9f5eac25aa0fffe@192.168.1.5:30301 --mine --minerthreads=1 --etherbase=0x625a10289a293ec2881255efde9e80c312fd1223 --networkid 1111
+
+4. 创建一个新的账户并检查余额
+
+TaurusdeMacBook-Pro:geth-net taurusfeng$ ./bin/geth attach /Users/taurusfeng/source/product/eth/geth-net/data/geth.ipc 
+Welcome to the Geth JavaScript console!
+
+instance: Geth/v1.7.3-stable-4bb3c89d/darwin-amd64/go1.9.2
+ modules: admin:1.0 debug:1.0 eth:1.0 miner:1.0 net:1.0 personal:1.0 rpc:1.0 txpool:1.0 web3:1.0
+
+> eth.accounts
+[]
+> personal.newAccount("123321")
+"0x625a10289a293ec2881255efde9e80c312fd1223"
+> web3.fromWei(eth.getBalance(eth.accounts[0]), "ether")
+0
+> 
+
+5. 挖矿啦
+
+./bin/geth --datadir=/Users/taurusfeng/source/product/eth/geth-net/data/ --mine --minerthreads=1 --etherbase=0x625a10289a293ec2881255efde9e80c312fd1223
+
+
+6. 编译第一个合约
+
+cd /Users/taurusfeng/source/product/eth/geth-net/source
+
+vi greeter.sol ====>
+
+<====
+
+TaurusdeMacBook-Pro:source taurusfeng$ solc --bin --abi -o /Users/taurusfeng/source/product/eth/geth-net/source/ ./greeter.sol 
+
+7. 发布greeter合约到私有网络
+
+账户足够余额，并且钱包未锁定
+
+> web3.fromWei(eth.getBalance(eth.accounts[0]), "ether")
+4630
+> personal.unlockAccount(eth.accounts[0], "123321")
+true
+> loadScript("greetContract.js")
+Contract mined! address: 0x832506a00784e2421755bd7b215ab55fccdddd21 transactionHash: 0x8e04e3e3bb152f97796f0197829a6be555e9ef5a5d59edddba459d8f7af00dbb
+>
+
+eth.getCode("0x832506a00784e2421755bd7b215ab55fccdddd21")
+
+8. 调用greeter合约
+
+var abi = '[{"constant":false,"inputs":[],"name":"kill","outputs":[],"payable":false,"type":"function","stateMutability":"nonpayable"},{"constant":true,"inputs":[],"name":"greet","outputs":[{"name":"","type":"string"}],"payable":false,"type":"function","stateMutability":"view"},{"inputs":[{"name":"_greeting","type":"string"}],"payable":false,"type":"constructor","stateMutability":"nonpayable"}]';
+
+abi = JSON.parse(abi);
+
+var Contract = web3.eth.contract(abi);
+
+var c = contract.at("0x832506a00784e2421755bd7b215ab55fccdddd21");
+c.greet();
+
+
+
+多节点私有网络
+https://omarmetwally.blog/2017/09/27/how-to-connect-3-ethereum-nodes-in-a-private-ethereum-network/
+
+geth --datadir=/Users/taurusfeng/source/product/eth/geth-net/node1/ init ../genesis.json
+
+geth --datadir=/Users/taurusfeng/source/product/eth/geth-net/node1/ --port 30304 --rpc --rpcport 8544 --networkid 1111 console
+
+
