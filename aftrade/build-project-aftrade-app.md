@@ -20,7 +20,10 @@
 源码编译：
 
 ```
-git clone 
+git clone https://github.com/alackfeng/aftradeapp.git
+cd aftradeapp
+
+
 ```
 
 增加日志功能：
