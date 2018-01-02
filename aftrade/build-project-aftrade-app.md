@@ -50,7 +50,7 @@ gulp run web
 4. 增加react-navigation导航支持
 5. redux使用 
 6. 构建LIB库
-7。 增加跨平台storage存储？？？？？
+7. 增加跨平台storage存储？？？？？
 ```
 
 #### 增加日志功能：
@@ -62,7 +62,7 @@ npm install --save redux-logger
 #### 待完成：
 
 ```
-1. 
+1.
 ```
 
 #### FAQ.
