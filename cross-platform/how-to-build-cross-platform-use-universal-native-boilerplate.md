@@ -66,7 +66,11 @@ Q3. Print: Entry, ":CFBundleIdentifier", Does Not Exist
 A3.
 
 Q4. com.android.ddmlib.InstallException: INSTALL_FAILED_USER_RESTRICTED: Install canceled by user
-A4. 
+A4.
+
+Q5. Failed to create provisioning profile.
+The app ID "org.reactjs.native.example.TarotApp" cannot be registered to your development team. Change your bundle identifier to a unique string to try again.
+A5. 
 ```
 
 
