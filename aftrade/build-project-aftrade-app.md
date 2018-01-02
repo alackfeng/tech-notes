@@ -10,12 +10,14 @@
 
 * mac pro
 
-#### 环境依赖：
+#### 安装依赖：
 
 * android studio
 * xcode
 * node\|npm\|...
 * react\|react-native
+
+安装
 
 增加日志功能：
 
