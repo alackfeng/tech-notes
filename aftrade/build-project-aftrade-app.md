@@ -17,7 +17,7 @@
 * node\|npm\|...
 * react\|react-native
 
-源码编译：
+#### 源码编译：
 
 ```
 git clone https://github.com/alackfeng/aftradeapp.git
@@ -39,7 +39,7 @@ gulp build web
 gulp run web
 ```
 
-增加日志功能：
+#### 增加日志功能：
 
 ```
 npm install --save redux-logger
