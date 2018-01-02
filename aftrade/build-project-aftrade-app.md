@@ -53,6 +53,12 @@ gulp run web
 7. 增加跨平台storage存储？？？？？
 ```
 
+#### react-navigation导航构建：
+
+```
+
+```
+
 #### 增加日志功能：
 
 ```
