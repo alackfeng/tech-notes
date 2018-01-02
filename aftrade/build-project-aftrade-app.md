@@ -59,7 +59,7 @@ gulp run web
 1. 分三部分：StackNavigator顶部导航，TabNavigator底部标签栏，DrawerNavigator侧滑页面
 2. screenProps：属于navigationOptions的一个属性，可以全局控制navigationOptions中的某些值，
    比如说你想做换肤功能，修改这个属性绝对是最简单的方式。
-3. 
+3. Linking使用
 ```
 
 #### 增加日志功能：
