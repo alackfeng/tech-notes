@@ -55,8 +55,7 @@ npm install --save redux-logger
 #### 待完成：
 
 ```
-增加跨平台storage存储？？？？？
-
+1. 增加跨平台storage存储？？？？？
 ```
 
 #### FAQ.
