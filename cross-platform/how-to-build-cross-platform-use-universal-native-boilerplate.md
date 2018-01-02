@@ -47,31 +47,32 @@ gulp run ios
 
 遇到问题：
 
-```
-Q1. ../node_modules/react-native/packager/react-native-xcode.sh: No such file or directory
-A1. xcode => Build Phases > Bundle React Native code and images
-=> export NODE_BINARY=node
-../node_modules/react-native/scripts/react-native-xcode.sh
+    Q1. ../node_modules/react-native/packager/react-native-xcode.sh: No such file or directory
+    A1. xcode => Build Phases > Bundle React Native code and images
+    => export NODE_BINARY=node
+    ../node_modules/react-native/scripts/react-native-xcode.sh
 
-Q2. Error:Unsupported method: BaseConfig.getApplicationIdSuffix().
-The version of Gradle you connect to does not support that method.
-To resolve the problem you can change/upgrade the target version of Gradle you connect to.
-Alternatively, you can ignore this exception and read other information from the model.
+    Q2. Error:Unsupported method: BaseConfig.getApplicationIdSuffix().
+    The version of Gradle you connect to does not support that method.
+    To resolve the problem you can change/upgrade the target version of Gradle you connect to.
+    Alternatively, you can ignore this exception and read other information from the model.
 
-Consult IDE log for more details (Help | Show Log)
+    Consult IDE log for more details (Help | Show Log)
 
-A2. https://developer.android.com/studio/build/gradle-plugin-3-0-0-migration.html
+    A2. https://developer.android.com/studio/build/gradle-plugin-3-0-0-migration.html
 
-Q3. Print: Entry, ":CFBundleIdentifier", Does Not Exist
-A3.
+    Q3. Print: Entry, ":CFBundleIdentifier", Does Not Exist
+    A3.
 
-Q4. com.android.ddmlib.InstallException: INSTALL_FAILED_USER_RESTRICTED: Install canceled by user
-A4. 权限问题-mi5 => 设置 - 更多设置 - 开发者选项 - USB安装
+    Q4. com.android.ddmlib.InstallException: INSTALL_FAILED_USER_RESTRICTED: Install canceled by user
+    A4. 权限问题-mi5 => 设置 - 更多设置 - 开发者选项 - USB安装
 
-Q5. Failed to create provisioning profile.
-The app ID "org.reactjs.native.example.TarotApp" cannot be registered to your development team. Change your bundle identifier to a unique string to try again.
-A5. 改变general -> Bundle Identifier => org.reactjs.native.example.TarotApp1
-```
+    Q5. Failed to create provisioning profile.
+    The app ID "org.reactjs.native.example.TarotApp" cannot be registered to your development team. Change your bundle identifier to a unique string to try again.
+    A5. 改变general -> Bundle Identifier => org.reactjs.native.example.TarotApp1
+
+    Q6. [fatal][tid:com.facebook.react.JavaScript] Connection to http://192.168.1.8.xip.io:8081/debugger-proxy?role=client timed out. Are you running node proxy? If you are running on the device, check if you have the right IP address in `RCTWebSocketExecutor.m`.
+    A6. 
 
 
 
