@@ -33,7 +33,7 @@ gulp enable ios
 gulp build ios
 gulp run ios
 
-#android
+# web
 gulp enable android
 gulp build android
 gulp run android
