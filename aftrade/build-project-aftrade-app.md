@@ -39,12 +39,6 @@ gulp build web
 gulp run web
 ```
 
-#### 增加日志功能：
-
-```
-npm install --save redux-logger
-```
-
 #### 开发日志：
 
 ```
@@ -55,7 +49,13 @@ npm install --save redux-logger
 3. 增加Playground测试UI View接口
 4. 增加react-navigation导航支持
 5. redux使用 
-6. 构建LIB库 
+6. 构建LIB库
+```
+
+#### 增加日志功能：
+
+```
+npm install --save redux-logger
 ```
 
 #### 待完成：
