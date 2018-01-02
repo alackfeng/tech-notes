@@ -49,7 +49,7 @@ npm install --save redux-logger
 
 ```
 1. 增加redux中间件日志／异步操作等 logger promise array to middleware
-2.
+2. 
 ```
 
 #### 待完成：
