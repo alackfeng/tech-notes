@@ -16,7 +16,9 @@
  git clone https://github.com/c-h-/universal-native-boilerplate.git cross-platform-app
  cd cross-platform-app
  npm install
+ 
  npm run setup # initializes a new git repository
+ npm install -g gulp
 ```
 
 常见命令：
