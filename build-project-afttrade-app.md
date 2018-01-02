@@ -8,5 +8,11 @@ macos  10.12.6 \(16G29\)
 
 安装依赖：
 
+android studio \ xcode \ node \ ...
+
+安装步骤
+
+git 
+
 
 
