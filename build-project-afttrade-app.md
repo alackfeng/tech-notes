@@ -8,11 +8,14 @@ macos  10.12.6 \(16G29\)
 
 安装依赖：
 
-android studio \ xcode \ node \ ...
+android studio  xcode  node  ...
 
 安装步骤
 
-git 
+```
+git clone https://github.com/alackfeng/aftradeapp.git
+
+```
 
 
 
