@@ -21,6 +21,15 @@ gulp enable android
 gulp build android
 gulp run android
 
+#ios
+gulp enable android
+gulp build android
+gulp run android
+
+#android
+gulp enable android
+gulp build android
+gulp run android
 ```
 
 
