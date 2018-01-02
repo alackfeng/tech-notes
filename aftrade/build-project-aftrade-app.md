@@ -2,9 +2,9 @@
 
 ```
 
-构建aftrade平台APP，支持ios\|android\|web\|desktop等多平台
+## 构建aftrade平台APP，支持ios\|android\|web\|desktop等多平台
 
-开发环境：
+## 开发环境：
 
 * macos 10.12.6 \(16G29\)
 * mac pro
