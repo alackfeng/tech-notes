@@ -50,7 +50,7 @@ npm install --save redux-logger
 ```
 1. 增加redux中间件日志／异步操作等 logger promise array to middleware
    npm install --save redux-logger
-2. 增加启动屏功能，有好于用户
+2. 增加启动屏功能，友好于用户
 ```
 
 #### 待完成：
