@@ -22,9 +22,9 @@ gulp build android
 gulp run android
 
 #ios
-gulp enable android
-gulp build android
-gulp run android
+gulp enable ios
+gulp build ios
+react-native run-ios --device ##gulp run ios
 
 #android
 gulp enable android
