@@ -45,6 +45,12 @@ gulp run web
 npm install --save redux-logger
 ```
 
+#### 开发日志：
+
+```
+1. 增加redux中间件日志／异步操作等 logger promise array to middleware
+```
+
 #### _增加跨平台storage存储？？？？？_
 
 #### FAQ.
