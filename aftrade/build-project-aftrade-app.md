@@ -29,16 +29,14 @@ gulp build android
 gulp run android
 
 # ios
-gulp enable android
-gulp build android
-gulp run android
+gulp enable ios
+gulp build ios
+gulp run ios
 
 #android
 gulp enable android
 gulp build android
 gulp run android
-
-
 ```
 
 增加日志功能：
