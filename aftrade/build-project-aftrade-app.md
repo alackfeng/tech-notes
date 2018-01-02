@@ -31,12 +31,12 @@ gulp run android
 # ios
 gulp enable ios
 gulp build ios
-gulp run ios
+react-native run-ios --device ###gulp run ios
 
 # web
-gulp enable android
-gulp build android
-gulp run android
+gulp enable web
+gulp build web
+gulp run web
 ```
 
 增加日志功能：
