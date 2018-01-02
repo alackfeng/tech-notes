@@ -57,6 +57,7 @@ gulp run web
 
 ```
 1. 分三部分：StackNavigator顶部导航，TabNavigator底部标签栏，DrawerNavigator侧滑页面
+2. 
 ```
 
 #### 增加日志功能：
