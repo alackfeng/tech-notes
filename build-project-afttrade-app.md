@@ -6,11 +6,11 @@ mac pro
 
 macos  10.12.6 \(16G29\)
 
-安装依赖：
+### 安装依赖：
 
 android studio  xcode  node  ...
 
-安装步骤
+### 安装步骤
 
 ```
 git clone https://github.com/alackfeng/aftradeapp.git
@@ -30,6 +30,12 @@ react-native run-ios --device ##gulp run ios
 gulp enable web
 gulp build web
 gulp run web
+```
+
+FAQ系统
+
+```
+Q1.
 ```
 
 
