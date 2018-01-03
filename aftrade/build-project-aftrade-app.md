@@ -77,7 +77,7 @@ npm install --save redux-logger
     解决办法就是统一改成ES6的方式编写即可.
 
     Q2. warning.js?6327:33 Warning: React does not recognize the `headerMode` prop on a DOM element
-    A2.
+    A2. StackNavigator({}, {headerMode: 'none'})
 
 
 
