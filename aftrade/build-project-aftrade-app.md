@@ -79,5 +79,8 @@ npm install --save redux-logger
     Q2. warning.js?6327:33 Warning: React does not recognize the `headerMode` prop on a DOM element
     A2. StackNavigator({}, {headerMode: 'none'})
 
+    Q3. Uncaught (in promise) Unsupported platform
+    A3. 
+
 
 
