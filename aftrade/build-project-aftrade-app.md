@@ -60,6 +60,9 @@ gulp run web
 2. screenProps：属于navigationOptions的一个属性，可以全局控制navigationOptions中的某些值，
    比如说你想做换肤功能，修改这个属性绝对是最简单的方式。
 3. Linking使用 react-native
+4. path属性适用于其他app或浏览器使用url打开本app并进入指定页面。path属性用于声明一个界面路径，例如：【/pages/Home】。
+   此时我们可以在手机浏览器中输入：app名称://pages/Home来启动该App，并进入Home界面。
+   
 ```
 
 #### 增加日志功能：
