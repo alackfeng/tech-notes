@@ -62,7 +62,6 @@ gulp run web
 3. Linking使用 react-native
 4. path属性适用于其他app或浏览器使用url打开本app并进入指定页面。path属性用于声明一个界面路径，例如：【/pages/Home】。
    此时我们可以在手机浏览器中输入：app名称://pages/Home来启动该App，并进入Home界面。
-   
 ```
 
 #### 增加日志功能：
@@ -73,14 +72,12 @@ npm install --save redux-logger
 
 #### FAQ.
 
-```
-Q1. Uncaught TypeError: Cannot assign to read only property 'exports' of object '#<Object>'
-A1. 因为webpack 2中不允许混用import和module.exports ,
-解决办法就是统一改成ES6的方式编写即可.
+    Q1. Uncaught TypeError: Cannot assign to read only property 'exports' of object '#<Object>'
+    A1. 因为webpack 2中不允许混用import和module.exports ,
+    解决办法就是统一改成ES6的方式编写即可.
 
-Q2.
-A2.
-```
+    Q2. warning.js?6327:33 Warning: React does not recognize the `headerMode` prop on a DOM element
+    A2.
 
 
 
