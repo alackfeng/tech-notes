@@ -51,6 +51,7 @@ gulp run web
 5. redux使用 
 6. 构建LIB库
 7. 增加跨平台storage存储？？？？？
+8. reselect改善react/redux性能
 ```
 
 #### react-navigation导航构建：
@@ -79,7 +80,7 @@ npm install --save redux-logger
     Q2. warning.js?6327:33 Warning: React does not recognize the `headerMode` prop on a DOM element
     A2. StackNavigator({}, {headerMode: 'none'})
 
-    Q3. Uncaught (in promise) Unsupported platform .  	@createNavigationContainer.js
+    Q3. Uncaught (in promise) Unsupported platform .      @createNavigationContainer.js
     A3. 
 
 
