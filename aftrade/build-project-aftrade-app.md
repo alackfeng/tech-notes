@@ -52,7 +52,7 @@ gulp run web
 6. 构建LIB库
 7. 增加跨平台storage存储？？？？？
 8. reselect改善react/redux性能
-9. 
+9.
 ```
 
 #### react-navigation导航构建：
@@ -72,6 +72,13 @@ gulp run web
 npm install --save redux-logger
 ```
 
+#### 解决绝对路径访问自定义模块
+
+```
+npm install --save-dev babel-plugin-module-resolver
+
+```
+
 #### FAQ.
 
     Q1. Uncaught TypeError: Cannot assign to read only property 'exports' of object '#<Object>'
@@ -83,6 +90,8 @@ npm install --save redux-logger
 
     Q3. Uncaught (in promise) Unsupported platform .      @createNavigationContainer.js
     A3. 
+
+    Q4. 
 
 
 
