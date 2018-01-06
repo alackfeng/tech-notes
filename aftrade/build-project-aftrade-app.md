@@ -48,6 +48,7 @@ gulp run web
    1)APP启动时显示，2)js bundle加载并渲染完成后消失，3)全屏显示，4)显示的内容可配置
 3. 增加Playground测试UI View接口
 4. 增加react-navigation导航支持
+   引导导航StackNavigator及主导航TabNavigator
 5. redux使用 
 6. 构建LIB库
 7. 增加跨平台storage存储？？？？？
