@@ -76,10 +76,8 @@ npm install --save redux-logger
 
 ```
 npm install --save-dev babel-plugin-module-resolver
-npm install --save-dev transform-inline-environment-variables
+FAQ.
 ```
-
-#### FAQ.
 
     Q1. Uncaught TypeError: Cannot assign to read only property 'exports' of object '#<Object>'
     A1. 因为webpack 2中不允许混用import和module.exports ,
