@@ -53,7 +53,7 @@ gulp run web
 6. 构建LIB库
 7. 增加跨平台storage存储？？？？？
 8. reselect改善react/redux性能
-9.
+9. 增加国际化处理，
 ```
 
 #### react-navigation导航构建：
