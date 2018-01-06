@@ -54,6 +54,7 @@ gulp run web
 7. 增加跨平台storage存储？？？？？
 8. reselect改善react/redux性能
 9. 增加国际化处理，
+10.Splash Screen启动页测试，
 ```
 
 #### react-navigation导航构建：
