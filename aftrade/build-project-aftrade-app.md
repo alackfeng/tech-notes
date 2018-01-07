@@ -55,6 +55,7 @@ gulp run web
 8. reselect改善react/redux性能
 9. 增加国际化处理，
 10.Splash Screen启动页测试，
+11.增加styled-components支持，
 ```
 
 #### react-navigation导航构建：
