@@ -51,7 +51,7 @@ gulp run web
 7. reselect改善react/redux性能（未实现）
 8. 增加国际化处理（I18n）react-native-i18n
 9. 增加跨平台storage存储（未实现）
-10. 增加styled-components UI库使用
+10.增加styled-components UI库使用
 ```
 
 #### react-navigation导航构建：
