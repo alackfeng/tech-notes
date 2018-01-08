@@ -42,20 +42,16 @@ gulp run web
 #### 开发日志：
 
 ```
-1. 增加redux中间件日志／异步操作等 logger promise array to middleware
-   npm install --save redux-logger
-2. 增加启动屏(launch screen)功能，友好于用户(未完成)
-   1)APP启动时显示，2)js bundle加载并渲染完成后消失，3)全屏显示，4)显示的内容可配置
-3. 增加Playground测试UI View接口
-4. 增加react-navigation导航支持
-   引导导航StackNavigator及主导航TabNavigator
-5. redux使用 
-6. 构建LIB库
-7. 增加跨平台storage存储？？？？？
-8. reselect改善react/redux性能
-9. 增加国际化处理，
-10.Splash Screen启动页测试，
-11.增加styled-components支持，
+1. 通过react-nativee-cli及webpack创建react-native(ios|android)、react-native-web(web)工程aftrade，
+2. 增加redux支持，中间件日志／异步操作等 logger promise array to middleware。npm install --save redux-logger
+3. 增加启动屏(launch screen)功能，友好于用户(未完成)。1)APP启动时显示，2)js bundle加载并渲染完成后消失，3)全屏显示，4)显示的内容可配置
+4. Splash Screen启动页测试
+5. 增加Playground测试UI View接口
+6. 增加react-navigation导航支持。引导导航StackNavigator及主导航TabNavigator
+7. reselect改善react/redux性能（未实现）
+8. 增加国际化处理（I18n）react-native-i18n
+9. 增加跨平台storage存储（未实现）
+10. 增加styled-components UI库使用
 ```
 
 #### react-navigation导航构建：
