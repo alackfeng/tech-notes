@@ -93,8 +93,7 @@ FAQ.
 
     Q5. Can't find variable: Buffer
     A5. npm install --save buffer
-
-
+    npm install --save assetfunjs-ws assetfunjs
 
 
 
