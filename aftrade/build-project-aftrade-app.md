@@ -92,7 +92,7 @@ FAQ.
     A4. npm install stream --save
 
     Q5. Can't find variable: Buffer
-    A5. 
+    A5. npm install --save buffer
 
 
 
