@@ -99,5 +99,8 @@ FAQ.
     }
     npm install --save assetfunjs-ws assetfunjs
 
+    Q6. undefined is not an object (evaluating 'superCtor.prototype')
+    A6. 
+
 
 
