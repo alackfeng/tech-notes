@@ -94,9 +94,6 @@ FAQ.
     mv node_modules/react-native-stream node_modules/stream
 
 
-
-
-
     Q5. Can't find variable: Buffer
     A5. npm install --save buffer
     var Buffer = require('buffer').Buffer;
