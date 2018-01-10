@@ -89,6 +89,7 @@ FAQ.
     A3. 
 
     Q4. 
+    A4. npm install stream --save
 
 
 
