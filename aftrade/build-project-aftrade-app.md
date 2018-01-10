@@ -103,6 +103,7 @@ FAQ.
     npm install --save assetfunjs-ws assetfunjs
 
     global.Buffer = global.Buffer || require('buffer').Buffer;
+    /Users/assetfun/source/code/aftradeapp/node_modules/create-hash/make-hash.js
 
     Q6. undefined is not an object (evaluating 'superCtor.prototype')
     A6. ----不使用了，npm install stream --save，直接把react-native-stream改成stream
