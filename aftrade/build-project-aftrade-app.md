@@ -88,7 +88,7 @@ FAQ.
     Q3. Uncaught (in promise) Unsupported platform .      @createNavigationContainer.js
     A3. 
 
-    Q4. 
+    Q4. Unable to resolve module `stream` from `/Users/assetfun/source/code/aftradeapp/node_modules/cipher-base/index.js`
     A4. npm install stream --save
 
 
