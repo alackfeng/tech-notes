@@ -102,6 +102,8 @@ FAQ.
     }
     npm install --save assetfunjs-ws assetfunjs
 
+    global.Buffer = global.Buffer || require('buffer').Buffer;
+
     Q6. undefined is not an object (evaluating 'superCtor.prototype')
     A6. ----不使用了，npm install stream --save，直接把react-native-stream改成stream
 
