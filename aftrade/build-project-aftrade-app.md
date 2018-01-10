@@ -89,7 +89,7 @@ FAQ.
     A3. 
 
     Q4. Unable to resolve module `stream` from `/Users/assetfun/source/code/aftradeapp/node_modules/cipher-base/index.js`
-    A4. ----不使用了，npm install stream --save
+    A4. ----不使用了，npm install stream --save，直接把native-stream改成stream
     npm install --save react-native-stream
     mv node_modules/react-native-stream node_modules/stream
 
