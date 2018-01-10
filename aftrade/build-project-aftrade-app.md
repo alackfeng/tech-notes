@@ -91,5 +91,8 @@ FAQ.
     Q4. Unable to resolve module `stream` from `/Users/assetfun/source/code/aftradeapp/node_modules/cipher-base/index.js`
     A4. npm install stream --save
 
+    Q5. Can't find variable: Buffer
+    A5. 
+
 
 
