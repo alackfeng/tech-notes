@@ -90,9 +90,11 @@ FAQ.
 
     Q4. Unable to resolve module `stream` from `/Users/assetfun/source/code/aftradeapp/node_modules/cipher-base/index.js`
     A4. npm install stream --save
+    npm install --save react-native-stream
 
     Q5. Can't find variable: Buffer
     A5. npm install --save buffer
+
     var Buffer = require('buffer').Buffer;
     if(typeof global !== 'undefined') {
       global.Buffer = require('buffer').Buffer; // TODO just use global Buffer
