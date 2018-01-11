@@ -65,6 +65,12 @@ gulp run web
    此时我们可以在手机浏览器中输入：app名称://pages/Home来启动该App，并进入Home界面。
 ```
 
+#### 跨平台存储
+
+```
+npm install indexeddbshim
+```
+
 #### 增加日志功能：
 
 ```
