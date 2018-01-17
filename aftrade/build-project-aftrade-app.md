@@ -114,5 +114,9 @@ FAQ.
     Q6. undefined is not an object (evaluating 'superCtor.prototype')
     A6. ----不使用了，npm install stream --save，直接把react-native-stream改成stream
 
+    Q7. redux-saga Uncaught ReferenceError: regeneratorRuntime is not defined
+    A7. npm install --save-dev babel-polyfill
+    import 'regenerator-runtime/runtime'; ----- sagas/index.js 加入
+
 
 
