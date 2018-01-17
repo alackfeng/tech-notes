@@ -123,7 +123,7 @@ FAQ.
     import 'regenerator-runtime/runtime'; ----- sagas/index.js 加入
 
     Q8. Could not find com.android.tools.build:gradle:3.0.1
-    A8. 
+    A8. 增加google()到android/build.gradle 支持3.0.1
 
     Q9. Cannot find entry file index.js in any of the roots
     A9. 
