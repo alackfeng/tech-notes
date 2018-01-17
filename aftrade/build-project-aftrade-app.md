@@ -16,6 +16,12 @@
 * xcode
 * node\|npm\|...
 * react\|react-native
+* 
+  p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 11.0px Menlo; color: \#000000; background-color: \#ffffff}  
+  span.s1 {font-variant-ligatures: no-common-ligatures}  
+
+
+  react-native-cli: 2.0.1
 
 #### 源码编译：
 
