@@ -21,6 +21,9 @@
 #### 源码编译：
 
 ```
+react-native init aftbomb
+
+
 git clone https://github.com/alackfeng/aftradeapp.git
 cd aftradeapp
 
