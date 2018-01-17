@@ -125,5 +125,8 @@ FAQ.
     Q8. Could not find com.android.tools.build:gradle:3.0.1
     A8. 
 
+    Q9. Cannot find entry file index.js in any of the roots
+    A9. 
+
 
 
