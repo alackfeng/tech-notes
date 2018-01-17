@@ -16,7 +16,7 @@
 * xcode
 * node\|npm\|...
 * react\|react-native
-* react-native-cli: 2.0.1
+* **react-native-cli: 2.0.1**
 
 #### 源码编译：
 
