@@ -128,7 +128,9 @@ FAQ.
     Q9. Cannot find entry file index.js in any of the roots
     A9. 
     vi android/app/build.gradle => 
-    entryFile: "index.android.js"
+    project.ext.react = [
+        entryFile: "index.android.js"
+    ]
     vi android/app/src/main/java/com/aftbomb/MainApplication.java => 
     protected String getJSMainModuleName() {
           return "index.android";
