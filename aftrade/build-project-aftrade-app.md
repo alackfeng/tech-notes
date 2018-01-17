@@ -122,5 +122,8 @@ FAQ.
     A7. npm install --save-dev babel-polyfill
     import 'regenerator-runtime/runtime'; ----- sagas/index.js 加入
 
+    Q8. Could not find com.android.tools.build:gradle:3.0.1
+    A8. 
+
 
 
