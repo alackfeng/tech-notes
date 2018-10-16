@@ -53,7 +53,7 @@ Public key: EOS7ghjmTj7d9u8upMLuuxTs59AFutmc24bntqDZuSfiXDrDnucPc
 ./cleos create account eosio treasury EOS7ghjmTj7d9u8upMLuuxTs59AFutmc24bntqDZuSfiXDrDnucPc EOS7ghjmTj7d9u8upMLuuxTs59AFutmc24bntqDZuSfiXDrDnucPc
 ./cleos --wallet-url http://127.0.0.1:8900 create account eosio tester EOS7ghjmTj7d9u8upMLuuxTs59AFutmc24bntqDZuSfiXDrDnucPc EOS7ghjmTj7d9u8upMLuuxTs59AFutmc24bntqDZuSfiXDrDnucPc
 ./cleos create account treasury feng EOS7ghjmTj7d9u8upMLuuxTs59AFutmc24bntqDZuSfiXDrDnucPc EOS7ghjmTj7d9u8upMLuuxTs59AFutmc24bntqDZuSfiXDrDnucPc
-
+x
 
 ````
 
@@ -116,6 +116,75 @@ code hash: 5cf017909547b2d69cee5f01c53fe90f3ab193c57108f81a17f0716a4c83f9c0
 ./cleos multisig exec treasury test treasury -p treasury
 
 ./cleos multisig cancel tester test -p tester
+
+
+cleos ${WALLET_URL} get table eosio.msig treasury proposal
+cleos ${WALLET_URL} get table eosio.msig treasury approvals
+
+
+------------------- multisig eosio.token issue
+
+###### 多重签名操作
+
+cleos ${WALLET_URL} get currency balance eosio.token eosio
+cleos ${WALLET_URL} push action eosio.token issue '[ "eosio", "1000.0000 SYS", "memo orginal" ]' -p eosio@active
+
+cleos ${WALLET_URL} multisig propose tokenpropose '[{"actor": "useraaaaaaaa", "permission": "active"},{"actor": "producer111b", "permission": "active"},{"actor": "eosio", "permission": "active"}]' '[{"actor": "eosio", "permission": "active"}]' eosio.token issue '{"to": "eosio", "quantity": "1000.0000 SYS", "memo": " token proposer test msig "}' -p useraaaaaaaa
+cleos ${WALLET_URL} multisig review useraaaaaaaa tokenpropose
+cleos ${WALLET_URL} multisig approve useraaaaaaaa tokenpropose '{"actor": "useraaaaaaaa", "permission": "active"}' -p useraaaaaaaa
+cleos ${WALLET_URL} multisig approve useraaaaaaaa tokenpropose '{"actor": "eosio", "permission": "active"}' -p eosio
+cleos ${WALLET_URL} multisig exec useraaaaaaaa tokenpropose useraaaaaaaa -p useraaaaaaaa
+
+cleos ${WALLET_URL} multisig unapprove useraaaaaaaa tokenpropose '{"actor": "useraaaaaaaa", "permission": "active"}' -p useraaaaaaaa
+cleos ${WALLET_URL} multisig cancel useraaaaaaaa tokenpropose -p useraaaaaaaa
+
+
+cleos ${WALLET_URL} get table eosio.msig useraaaaaaaa proposal
+cleos ${WALLET_URL} get table eosio.msig useraaaaaaaa approvals
+
+cleos ${WALLET_URL} get currency balance eosio.token eosio
+
+
+
+-----------------------
+
+###### 多重签名转账操作
+
+cleos ${WALLET_URL} get account useraaaaaaae
+cleos ${WALLET_URL} get account useraaaaaaad
+cleos ${WALLET_URL} get account useraaaaaaac
+
+cleos ${WALLET_URL} set account permission useraaaaaaae owner '{"threshold":2,"keys":[],"accounts":[{"permission":{"actor":"useraaaaaaac","permission":"owner"},"weight":1},{"permission":{"actor":"useraaaaaaad","permission":"owner"},"weight":1}],"waits":[]}' -p useraaaaaaae@owner
+cleos ${WALLET_URL} set account permission useraaaaaaae active '{"threshold":1,"keys":[],"accounts":[{"permission":{"actor":"useraaaaaaac","permission":"owner"},"weight":1},{"permission":{"actor":"useraaaaaaad","permission":"owner"},"weight":1}],"waits":[]}' -p useraaaaaaae@owner
+
+cleos ${WALLET_URL} get account useraaaaaaae
+
+cleos ${WALLET_URL} get currency balance eosio.token useraaaaaaac
+cleos ${WALLET_URL} push action eosio.token transfer '[ "useraaaaaaae", "useraaaaaaac", "100.0000 SYS", "original test"]' -p useraaaaaaae@active
+
+cleos ${WALLET_URL} multisig propose transpropose '[{"actor": "useraaaaaaac", "permission": "owner"},{"actor": "useraaaaaaad", "permission": "owner"}]' '[{"actor": "useraaaaaaae", "permission": "active"}]' eosio.token transfer '{"from": "useraaaaaaae", "to": "useraaaaaaac", "quantity": "100.0000 SYS", "memo": " token transfer proposer test msig "}' -p useraaaaaaaa
+cleos ${WALLET_URL} multisig review useraaaaaaaa transpropose
+cleos ${WALLET_URL} multisig approve useraaaaaaaa transpropose '{"actor": "useraaaaaaac", "permission": "owner"}' -p useraaaaaaac@owner
+cleos ${WALLET_URL} multisig approve useraaaaaaaa transpropose '{"actor": "useraaaaaaad", "permission": "owner"}' -p useraaaaaaad@owner
+cleos ${WALLET_URL} multisig exec useraaaaaaaa transpropose useraaaaaaaa -p useraaaaaaaa
+
+#cleos ${WALLET_URL} multisig unapprove useraaaaaaaa transpropose '{"actor": "useraaaaaaad", "permission": "active"}' -p useraaaaaaad@owner
+cleos ${WALLET_URL} multisig cancel useraaaaaaaa transpropose -p useraaaaaaaa
+
+
+cleos ${WALLET_URL} get table eosio.msig useraaaaaaaa proposal
+cleos ${WALLET_URL} get table eosio.msig useraaaaaaaa approvals
+
+cleos ${WALLET_URL} get currency balance eosio.token useraaaaaaac
+
+
+cleos ${WALLET_URL} set account permission useraaaaaaae active '{"threshold":2,"keys":[{"key": "EOS7ghjmTj7d9u8upMLuuxTs59AFutmc24bntqDZuSfiXDrDnucPc","weight": 1}],"accounts":[{"permission":{"actor":"useraaaaaaac","permission":"active"},"weight":1},{"permission":{"actor":"useraaaaaaae","permission":"active"},"weight":1}],"waits":[]}' -p useraaaaaaae@owner
+cleos ${WALLET_URL} get account useraaaaaaae
+
+
+
+-------------------
+
 
 Q1. Error 3090003: Provided keys, permissions, and delays do not satisfy declared authorizations
 A1: Fixed. All the signature account should hava "eosio.msig@eosio.code" permission now.

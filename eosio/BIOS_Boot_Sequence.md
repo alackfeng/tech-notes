@@ -26,7 +26,7 @@ MAC：python3
 pip3 install numpy   #### pip install numpy
 
 cd /Users/tokenfun/eosio/eos/tutorials/bios-boot-tutorial
-./bios-boot-tutorial.py -a --producer-limit 10 --user-limit 10 --num-voters 5 --num-producers-vote 5 --producer-sync-delay 10
+./bios-boot-tutorial.py -a --producer-limit 5 --user-limit 5 --num-voters 3 --num-producers-vote 3 --producer-sync-delay 10
 
 
 ````
@@ -348,7 +348,25 @@ cleos ${WALLET_URL} get account eosio.vpay
 #### 13. Replace system contract using msig
 `````
 
-cleos ${WALLET_URL} push action eosio buyrambytes
+cleos ${WALLET_URL} push action eosio buyrambytes '["producer111a", "useraaaaaaaa", 200000]' -p producer111a
+
+cleos ${WALLET_URL} multisig propose fast.unstake '[{"actor": "producer111a", "permission": "active"}, {"actor": "producer111b", "permission": "active"}, {"actor": "producer111c", "permission": "active"}, {"actor": "producer111d", "permission": "active"}, {"actor": "producer111e", "permission": "active"}, {"actor": "producer111f", "permission": "active"}, {"actor": "producer111g", "permission": "active"}, {"actor": "producer111h", "permission": "active"}, {"actor": "producer111i", "permission": "active"}, {"actor": "producer111j", "permission": "active"}, {"actor": "producer111k", "permission": "active"}, {"actor": "producer111l", "permission": "active"}, {"actor": "producer111m", "permission": "active"}, {"actor": "producer111n", "permission": "active"}, {"actor": "producer111o", "permission": "active"}, {"actor": "producer111p", "permission": "active"}, {"actor": "producer111q", "permission": "active"}, {"actor": "producer111r", "permission": "active"}, {"actor": "producer111s", "permission": "active"}, {"actor": "producer111t", "permission": "active"}, {"actor": "producer111u", "permission": "active"}, {"actor": "producer111v", "permission": "active"}, {"actor": "producer111w", "permission": "active"}, {"actor": "producer111x", "permission": "active"}, {"actor": "producer111y", "permission": "active"}, {"actor": "producer111z", "permission": "active"}, {"actor": "producer1111", "permission": "active"}, {"actor": "producer1112", "permission": "active"}, {"actor": "producer1113", "permission": "active"}, {"actor": "producer1114", "permission": "active"}]'  '[{"actor": "eosio", "permission": "active"}]' eosio setcode '{"account": "eosio", "vmtype": 0, "vmversion": 0, "code": "xxxxxx"}'  -p useraaaaaaaa
+
+cleos ${WALLET_URL} multisig approve useraaaaaaaa fast.unstake '{"actor": "producer111a", "permission": "active"}' -p producer111a
+cleos ${WALLET_URL} multisig approve useraaaaaaaa fast.unstake '{"actor": "producer111b", "permission": "active"}' -p producer111b
+cleos ${WALLET_URL} multisig approve useraaaaaaaa fast.unstake '{"actor": "producer111c", "permission": "active"}' -p producer111c
+cleos ${WALLET_URL} multisig approve useraaaaaaaa fast.unstake '{"actor": "producer111d", "permission": "active"}' -p producer111d
+cleos ${WALLET_URL} multisig approve useraaaaaaaa fast.unstake '{"actor": "producer111e", "permission": "active"}' -p producer111e
+
+cleos ${WALLET_URL} multisig exec useraaaaaaaa fast.unstake -p useraaaaaaaa
+cleos ${WALLET_URL} multisig cancel useraaaaaaaa fast.unstake -p useraaaaaaaa
+cleos ${WALLET_URL} multisig review useraaaaaaaa fast.unstake
+
+
+cleos ${WALLET_URL} get code eosio
+code hash: d8324003310065dd1d549a6929564c095c30e3a28954ec54dd72ced6cfaf08b3
+
+
 
 `````
 
