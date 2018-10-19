@@ -20,8 +20,11 @@ VERSION: 	v1.3.1-dirty
 ````
 killall keosd nodeos
 
-export MBP_DIR=/Users/tokenfun/mbp_eosio; 
+export MBP_DIR=/data/blockeosio/mbp_chain; 
 export MBP_URL="--wallet-url http://127.0.0.1:6666 --url http://127.0.0.1:8000"
+
+sudo mkdir -p ${MBP_DIR}; cd ${MBP_DIR};
+sudo chown -R vagrant:vagrant /data
 
 rm -r ~/.local/share/eosio/
 rm -r ~/eosio-wallet/
@@ -42,7 +45,7 @@ cd /home/vagrant/eosio/eos/tutorials/bios-boot-tutorial
 
 #### 0. 清空钱包和多节点进程
 ````
-sudo killall keosd nodeos
+killall keosd nodeos
 sudo rm -rf ${MBP_DIR}/wallet/
 sudo rm -rf ${MBP_DIR}/nodes/
 sudo rm -rf ${MBP_DIR}
@@ -70,21 +73,20 @@ Private key: 5KHfm1GrUury7JFuBRm7LCgY2oHE9sGPuJtEfmE1sN1nJGoqPwn Public key: EOS
 
 ###### export MBP_DIR=/Users/tokenfun/mbp_eosio; 
 ###### export MBP_URL="--wallet-url http://127.0.0.1:6666 --url http://127.0.0.1:8000"
-
-sudo mkdir -p ${MBP_DIR}; cd ${MBP_DIR};
+###### sudo mkdir -p ${MBP_DIR}; cd ${MBP_DIR};
 
 ###### A. 清空钱包
-export MBP_DIR=/opt/blockeos/mbpeos; sudo rm -rf ${MBP_DIR}/wallet/; sudo mkdir -p ${MBP_DIR}/wallet/
+export MBP_DIR=/data/blockeosio/mbp_chain; rm -rf ${MBP_DIR}/wallet/; mkdir -p ${MBP_DIR}/wallet/
 
-###### B. 启动keosd并创建钱包 PW5Hx6zMa5Up3kMHKU3Tb68PAgzN68Xusfo3b1dbDuQS4FEEVvo96
-nohup sudo keosd --unlock-timeout 99999999 --http-server-address 127.0.0.1:6666 --wallet-dir ${MBP_DIR}/wallet/ 2>&1 >> ${MBP_DIR}/wallet/stderr &
+###### B. 启动keosd并创建钱包 PW5K3eyHJ11gjvBiX2TLLrbmef3G3M8AqmMzpwf3veyvVzuaof81K
+nohup keosd --unlock-timeout 99999999 --http-server-address 127.0.0.1:6666 --wallet-dir ${MBP_DIR}/wallet/ 2>&1 >> ${MBP_DIR}/wallet/stderr &
 
-sudo cleos ${MBP_URL} wallet create --file password-wallet.txt
+cleos ${MBP_URL} wallet create --file password-wallet.txt
 cleos ${MBP_URL} wallet create --to-console
 Creating wallet: default
 Save password to use in the future to unlock this wallet.
 Without password imported keys will not be retrievable.
-"PW5Hx6zMa5Up3kMHKU3Tb68PAgzN68Xusfo3b1dbDuQS4FEEVvo96"
+"PW5K3eyHJ11gjvBiX2TLLrbmef3G3M8AqmMzpwf3veyvVzuaof81K"
 
 ###### C. 导入key
 
@@ -107,12 +109,14 @@ cleos ${MBP_URL} wallet import --private-key 5KHfm1GrUury7JFuBRm7LCgY2oHE9sGPuJt
 #### 2. 启动eosio创世节点
 ````
 ###### A. 清空节点
-sudo rm -rf ${MBP_DIR}/nodes/; sudo mkdir -p ${MBP_DIR}/nodes/
+rm -rf ${MBP_DIR}/nodes/; mkdir -p ${MBP_DIR}/nodes/
 ###### for (( i = 1; i <= 5; i++ )); do for (( j = 1 ; j <=5 ; j++ )); do mkdir ~/eosio_test/accountnum$i$j; done; done
 
 ###### A. 启动eosio节点
-sudo rm -rf ${MBP_DIR}/nodes/bp-eosio; sudo mkdir -p ${MBP_DIR}/nodes/bp-eosio
-nohup sudo nodeos --max-irreversible-block-age -1 --contracts-console --genesis-json ${MBP_DIR}/genesis.json --blocks-dir ${MBP_DIR}/nodes/bp-eosio/blocks --config-dir ${MBP_DIR}/nodes/bp-eosio   --data-dir ${MBP_DIR}/nodes/bp-eosio  --chain-state-db-size-mb 1024 --http-server-address 127.0.0.1:8000 --p2p-listen-endpoint 0.0.0.0:9000  --max-clients 25   --p2p-max-nodes-per-host 25  --enable-stale-production --producer-name eosio   --private-key '["EOS6wAwsSJh3GzUHgeadRRBFcm78zTXyciEQoib7wd8k8HBWYAR8i","5KK4ZoGiAcR5gBuFPwFdNodtTWDZeEFTVAXixcgFFnNzmyJKs8E"]' --plugin eosio::http_plugin --plugin eosio::chain_api_plugin --plugin eosio::producer_plugin --plugin eosio::history_plugin --plugin eosio::history_api_plugin --p2p-peer-address localhost:9001 2>&1 >> ${MBP_DIR}/nodes/bp-eosio/stderr &
+rm -rf ${MBP_DIR}/nodes/bp-eosio; mkdir -p ${MBP_DIR}/nodes/bp-eosio
+nohup nodeos --max-irreversible-block-age -1 --contracts-console --genesis-json ${MBP_DIR}/genesis.json --blocks-dir ${MBP_DIR}/nodes/bp-eosio/blocks --config-dir ${MBP_DIR}/nodes/bp-eosio   --data-dir ${MBP_DIR}/nodes/bp-eosio  --chain-state-db-size-mb 1024 --http-server-address 127.0.0.1:8000 --p2p-listen-endpoint 0.0.0.0:9000  --max-clients 25   --p2p-max-nodes-per-host 25  --enable-stale-production --producer-name eosio   --private-key '["EOS6wAwsSJh3GzUHgeadRRBFcm78zTXyciEQoib7wd8k8HBWYAR8i","5KK4ZoGiAcR5gBuFPwFdNodtTWDZeEFTVAXixcgFFnNzmyJKs8E"]' --plugin eosio::http_plugin --plugin eosio::chain_api_plugin --plugin eosio::producer_plugin --plugin eosio::history_plugin --plugin eosio::history_api_plugin 2>&1 >> ${MBP_DIR}/nodes/bp-eosio/stderr &
+
+nohup nodeos --config-dir ${MBP_DIR}/nodes/bp-eosio  --data-dir ${MBP_DIR}/nodes/bp-eosio  --http-server-address 127.0.0.1:8000 --p2p-listen-endpoint 0.0.0.0:9000  --enable-stale-production --producer-name eosio 2>&1 >> ${MBP_DIR}/nodes/bp-eosio/stderr &
 
 ````
 
@@ -131,9 +135,10 @@ nohup sudo nodeos --max-irreversible-block-age -1 --contracts-console --genesis-
 
 
 
-cleos ${MBP_URL} wallet unlock --password PW5Hx6zMa5Up3kMHKU3Tb68PAgzN68Xusfo3b1dbDuQS4FEEVvo96
+cleos ${MBP_URL} wallet unlock --password PW5K3eyHJ11gjvBiX2TLLrbmef3G3M8AqmMzpwf3veyvVzuaof81K
 
 cleos ${MBP_URL} get account eosio
+cleos ${MBP_URL} create account eosio eosio.bpay EOS6wAwsSJh3GzUHgeadRRBFcm78zTXyciEQoib7wd8k8HBWYAR8i -j -d
 cleos ${MBP_URL} create account eosio eosio.bpay EOS6wAwsSJh3GzUHgeadRRBFcm78zTXyciEQoib7wd8k8HBWYAR8i
 cleos ${MBP_URL} create account eosio eosio.msig EOS6wAwsSJh3GzUHgeadRRBFcm78zTXyciEQoib7wd8k8HBWYAR8i
 cleos ${MBP_URL} create account eosio eosio.names EOS6wAwsSJh3GzUHgeadRRBFcm78zTXyciEQoib7wd8k8HBWYAR8i
@@ -143,6 +148,7 @@ cleos ${MBP_URL} create account eosio eosio.saving EOS6wAwsSJh3GzUHgeadRRBFcm78z
 cleos ${MBP_URL} create account eosio eosio.stake EOS6wAwsSJh3GzUHgeadRRBFcm78zTXyciEQoib7wd8k8HBWYAR8i
 cleos ${MBP_URL} create account eosio eosio.token EOS6wAwsSJh3GzUHgeadRRBFcm78zTXyciEQoib7wd8k8HBWYAR8i
 cleos ${MBP_URL} create account eosio eosio.vpay EOS6wAwsSJh3GzUHgeadRRBFcm78zTXyciEQoib7wd8k8HBWYAR8i
+cleos ${MBP_URL} create account eosio taurus EOS6wAwsSJh3GzUHgeadRRBFcm78zTXyciEQoib7wd8k8HBWYAR8i
 
 
 `````
@@ -156,16 +162,22 @@ cleos ${MBP_URL} set contract eosio.msig /home/vagrant/eosio/eos/build/contracts
 
 `````
 
-#### 5. 创建分配 SYS 代币
+#### 5. 创建分配 EOS 代币
 `````
 
-cleos ${MBP_URL} push action eosio.token create '[ "eosio", "10000000000.0000 SYS" ]' -p eosio.token@active
-cleos ${MBP_URL} push action eosio.token issue '[ "eosio", "1000000000.0000 SYS", "memo" ]' -p eosio@active
+cleos ${MBP_URL} push action eosio.token create '[ "eosio", "10000000000.0000 EOS" ]' -p eosio.token@active
+cleos ${MBP_URL} push action eosio.token issue '[ "eosio", "1000000000.0000 EOS", "memo" ]' -p eosio@active
+cleos ${MBP_URL} push action eosio.token issue '[ "taurus", "1000000000.0000 EOS", "memo" ]' -p eosio@active
 
-cleos ${MBP_URL} get currency stats eosio.token SYS
-cleos ${MBP_URL} get currency balance eosio.token tester
+cleos ${MBP_URL} push action eosio.token create '[ "taurus", "10000000000.0000 SYS" ]' -p eosio.token@active
+cleos ${MBP_URL} push action eosio.token issue '[ "eosio", "1000000000.0000 SYS", "memo" ]' -p taurus@active
+cleos ${MBP_URL} push action eosio.token issue '[ "taurus", "1000000000.0000 SYS", "memo" ]' -p taurus@active
+
+
+cleos ${MBP_URL} get currency stats eosio.token EOS
+cleos ${MBP_URL} get currency balance eosio.token taurus
 cleos ${MBP_URL} get currency balance eosio.token eosio
-cleos ${MBP_URL} get table eosio.token SYS stat
+cleos ${MBP_URL} get table eosio.token EOS stat
 cleos ${MBP_URL} get table eosio.token eosio accounts
 
 `````
@@ -203,30 +215,30 @@ Private key: 5HvBnW2Xcu8L8ARLGd9ouKX7fpbijxhX51xTyg2adBPrjEGkNvD Public key: EOS
 Private key: 5JghLNk5Yd2ztJ1DJppwcgXbXGAj6fc5qsrRggcBHMjVJ5JwqHF Public key: EOS5hM7eZNQP8YSyXcCeN6rjP2J4rW3NFbC5h5yF8m15vRLkmMsFo
 Private key: 5KHfm1GrUury7JFuBRm7LCgY2oHE9sGPuJtEfmE1sN1nJGoqPwn Public key: EOS6ATEGZY5FdsS3hjKY6XPvLm2P5cfz7qgMQahLqtcAGNDmR5x2g
 
-###### cleos system newaccount eosio --transfer accountnum55 EOS8ZDaRSLPtADQGUsH52XN9wa9kxYi4LqU3bbEQGKoHqGHzsEvBb --stake-net "100000.0000 SYS" --stake-cpu "100000.0000 SYS" --buy-ram-kbytes 8192
+###### cleos ${MBP_URL} system newaccount eosio --transfer accountnum55 EOS6w226fMQyunGQe2waJQVWM6WtyPaJu5qJY7eqjFWARttvUpWz6 --stake-net "100000.0000 SYS" --stake-cpu "100000.0000 SYS" --buy-ram-kbytes 8192
 
 
 cleos ${MBP_URL} system newaccount --transfer eosio user11 EOS6w226fMQyunGQe2waJQVWM6WtyPaJu5qJY7eqjFWARttvUpWz6 --stake-net "146382842.7954 SYS" --stake-cpu "146382842.7955 SYS" --buy-ram "0.1000 SYS"   
-cleos ${MBP_URL} transfer eosio user11 "10.0000 SYS"
-cleos ${MBP_URL} system newaccount --transfer eosio user12 EOS8kXyeR7YiPYdAVvjqaczPEraNy21KVEspUVwE14nBpuHDdzsmD --stake-net "124427166.9055 SYS" --stake-cpu "124427166.9055 SYS" --buy-ram "0.1000 SYS"   
-cleos ${MBP_URL} transfer eosio user12 "10.0000 SYS"
-cleos ${MBP_URL} system newaccount --transfer eosio user13 EOS7nKtHm3qPTZLSgzM9LDHQRpb21tvdAZZJKzG5nBP1usVXKFDtM --stake-net "54250159.9678 SYS" --stake-cpu "54250159.9678 SYS" --buy-ram "0.1000 SYS"   
-cleos ${MBP_URL} transfer eosio user13 "10.0000 SYS"
-cleos ${MBP_URL} system newaccount --transfer eosio user14 EOS7xzF9413DcngKq994iWbMEFUr2EFN26AWwsNyfSVtBppGHHcGU --stake-net "29543656.6440 SYS" --stake-cpu "29543656.6440 SYS" --buy-ram "0.1000 SYS"   
-cleos ${MBP_URL} transfer eosio user14 "10.0000 SYS"
-cleos ${MBP_URL} system newaccount --transfer eosio user15 EOS6ozp4rTyc13X2f4nmyoyeiCijeugnK5fWvgAeijBTsyd7Yhhy3 --stake-net "20703368.5118 SYS" --stake-cpu "20703368.5118  SYS" --buy-ram "0.1000 SYS"   
-cleos ${MBP_URL} transfer eosio user15 "10.0000 SYS"
+cleos ${MBP_URL} transfer eosio user11 "10.0000 EOS"
+cleos ${MBP_URL} system newaccount --transfer eosio user12 EOS8kXyeR7YiPYdAVvjqaczPEraNy21KVEspUVwE14nBpuHDdzsmD --stake-net "124427166.9055 EOS" --stake-cpu "124427166.9055 EOS" --buy-ram "0.1000 EOS"   
+cleos ${MBP_URL} transfer eosio user12 "10.0000 EOS"
+cleos ${MBP_URL} system newaccount --transfer eosio user13 EOS7nKtHm3qPTZLSgzM9LDHQRpb21tvdAZZJKzG5nBP1usVXKFDtM --stake-net "54250159.9678 EOS" --stake-cpu "54250159.9678 EOS" --buy-ram "0.1000 EOS"   
+cleos ${MBP_URL} transfer eosio user13 "10.0000 EOS"
+cleos ${MBP_URL} system newaccount --transfer eosio user14 EOS7xzF9413DcngKq994iWbMEFUr2EFN26AWwsNyfSVtBppGHHcGU --stake-net "29543656.6440 EOS" --stake-cpu "29543656.6440 EOS" --buy-ram "0.1000 EOS"   
+cleos ${MBP_URL} transfer eosio user14 "10.0000 EOS"
+cleos ${MBP_URL} system newaccount --transfer eosio user15 EOS6ozp4rTyc13X2f4nmyoyeiCijeugnK5fWvgAeijBTsyd7Yhhy3 --stake-net "20703368.5118 EOS" --stake-cpu "20703368.5118  EOS" --buy-ram "0.1000 EOS"   
+cleos ${MBP_URL} transfer eosio user15 "10.0000 EOS"
 
-cleos ${MBP_URL} system newaccount --transfer eosio producer11 EOS5JgWbwM5wqiduEZW6Afg5h7msJiLJdFsVmawMDCmSAXeQ3H8EN --stake-net "9810277.0101 SYS" --stake-cpu "9810277.0101 SYS" --buy-ram "0.1000 SYS"   
-cleos ${MBP_URL} transfer eosio producer11 "10.0000 SYS"
-cleos ${MBP_URL} system newaccount --transfer eosio producer12 EOS4zjsBHYm5cYFcpvoLuL6wDMioPwgbmFyR9GhBk9mm1wNrsmFya --stake-net "8678719.3894 SYS" --stake-cpu "8678719.3894 SYS" --buy-ram "0.1000 SYS"   
-cleos ${MBP_URL} transfer eosio producer12 "10.0000 SYS"
-cleos ${MBP_URL} system newaccount --transfer eosio producer13 EOS7YeF9NgtnsSvby6dWbWhrzaJTegEHgYiUZpfaZ4qxB34V4FFhd --stake-net "8295536.1884 SYS" --stake-cpu "8295536.1884 SYS" --buy-ram "0.1000 SYS"   
-cleos ${MBP_URL} transfer eosio producer13 "10.0000 SYS"
-cleos ${MBP_URL} system newaccount --transfer eosio producer14 EOS5hM7eZNQP8YSyXcCeN6rjP2J4rW3NFbC5h5yF8m15vRLkmMsFo --stake-net "6636248.7910 SYS" --stake-cpu "6636248.7910 SYS" --buy-ram "0.1000 SYS"   
-cleos ${MBP_URL} transfer eosio producer14 "10.0000 SYS"
+cleos ${MBP_URL} system newaccount --transfer eosio producer11 EOS5JgWbwM5wqiduEZW6Afg5h7msJiLJdFsVmawMDCmSAXeQ3H8EN --stake-net "9810277.0101 EOS" --stake-cpu "9810277.0101 EOS" --buy-ram "0.1000 EOS"   
+cleos ${MBP_URL} transfer eosio producer11 "10.0000 EOS"
+cleos ${MBP_URL} system newaccount --transfer eosio producer12 EOS4zjsBHYm5cYFcpvoLuL6wDMioPwgbmFyR9GhBk9mm1wNrsmFya --stake-net "8678719.3894 EOS" --stake-cpu "8678719.3894 EOS" --buy-ram "0.1000 EOS"   
+cleos ${MBP_URL} transfer eosio producer12 "10.0000 EOS"
+cleos ${MBP_URL} system newaccount --transfer eosio producer13 EOS7YeF9NgtnsSvby6dWbWhrzaJTegEHgYiUZpfaZ4qxB34V4FFhd --stake-net "8295536.1884 EOS" --stake-cpu "8295536.1884 EOS" --buy-ram "0.1000 EOS"   
+cleos ${MBP_URL} transfer eosio producer13 "10.0000 EOS"
+cleos ${MBP_URL} system newaccount --transfer eosio producer14 EOS5hM7eZNQP8YSyXcCeN6rjP2J4rW3NFbC5h5yF8m15vRLkmMsFo --stake-net "6636248.7910 EOS" --stake-cpu "6636248.7910 EOS" --buy-ram "0.1000 EOS"   
+cleos ${MBP_URL} transfer eosio producer14 "10.0000 EOS"
 cleos ${MBP_URL} system newaccount --transfer eosio producer15 EOS6ATEGZY5FdsS3hjKY6XPvLm2P5cfz7qgMQahLqtcAGNDmR5x2g --stake-net "5867182.6445 SYS" --stake-cpu "5867182.6445  SYS" --buy-ram "0.1000 SYS"   
-cleos ${MBP_URL} transfer eosio producer15 "10.0000 SYS"
+cleos ${MBP_URL} transfer eosio producer15 "10.0000 EOS"
 
 
 cleos ${MBP_URL} get currency balance eosio.token user15
@@ -376,9 +388,9 @@ cleos ${MBP_URL} push action eosio buyrambytes '["eosio", "user11", 200000]' -p 
 Private key: 5K73QPaZ7EpCyEPFmadJiaLfF3DD3shugES7ErT33XUVddKrRmW Public key: EOS6XmgJgrftNdhVCJ2ZoyVc2yhz1zeq7UVJy4wDKmqpNjzqpoj9w
 
 cleos ${MBP_URL} wallet import --private-key 5K73QPaZ7EpCyEPFmadJiaLfF3DD3shugES7ErT33XUVddKrRmW
-cleos ${MBP_URL} system newaccount --transfer eosio user21 EOS6XmgJgrftNdhVCJ2ZoyVc2yhz1zeq7UVJy4wDKmqpNjzqpoj9w --stake-net "82842.7954 SYS" --stake-cpu "82842.7955 SYS" --buy-ram "0.1000 SYS"   
+cleos ${MBP_URL} system newaccount --transfer eosio user21 EOS6XmgJgrftNdhVCJ2ZoyVc2yhz1zeq7UVJy4wDKmqpNjzqpoj9w --stake-net "82842.7954 EOS" --stake-cpu "82842.7955 EOS" --buy-ram "0.1000 EOS"   
 
-cleos ${MBP_URL} transfer eosio user21 "10000.0000 SYS"
+cleos ${MBP_URL} transfer eosio user21 "10000.0000 EOS"
 
 ````
 
@@ -388,8 +400,8 @@ cleos ${MBP_URL} transfer eosio user21 "10000.0000 SYS"
 Private key: 5Jm3kYjqMycqThnhmsXmxtTkmXkk7sC8T1NZFBedyCx1wiksoKW Public key: EOS7ZtdL3zpPvAaGjVkytno7LBPzNK8W5p7XURvRbaG1uC6d7Q4Lz
 
 cleos ${MBP_URL} wallet import --private-key 5Jm3kYjqMycqThnhmsXmxtTkmXkk7sC8T1NZFBedyCx1wiksoKW
-cleos ${MBP_URL} system newaccount --transfer user21 alackfeng521 EOS7ZtdL3zpPvAaGjVkytno7LBPzNK8W5p7XURvRbaG1uC6d7Q4Lz --stake-net "1277.0101 SYS" --stake-cpu "1277.0101 SYS" --buy-ram "0.1000 SYS"   
-cleos ${MBP_URL} transfer user21 alackfeng521 "10.0000 SYS"
+cleos ${MBP_URL} system newaccount --transfer user21 alackfeng521 EOS7ZtdL3zpPvAaGjVkytno7LBPzNK8W5p7XURvRbaG1uC6d7Q4Lz --stake-net "1277.0101 EOS" --stake-cpu "1277.0101 EOS" --buy-ram "0.1000 EOS"   
+cleos ${MBP_URL} transfer user21 alackfeng521 "10.0000 EOS"
 cleos ${MBP_URL} system regproducer alackfeng521 EOS7ZtdL3zpPvAaGjVkytno7LBPzNK8W5p7XURvRbaG1uC6d7Q4Lz https://alackfeng521.com/EOS7ZtdL3zpPvAaGjVkytno7LBPzNK8W5p7XURvRbaG1uC6d7Q4Lz
 
 cleos ${MBP_URL} system voteproducer prods user21 alackfeng521
