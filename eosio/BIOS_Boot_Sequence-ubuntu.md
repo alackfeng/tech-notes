@@ -22,6 +22,7 @@ killall keosd nodeos
 
 export MBP_DIR=/data/blockeosio/mbp_chain; 
 export MBP_URL="--wallet-url http://127.0.0.1:6666 --url http://127.0.0.1:8000"
+alias cleos='cleos --wallet-url http://127.0.0.1:6666 --url http://127.0.0.1:8000'
 
 sudo mkdir -p ${MBP_DIR}; cd ${MBP_DIR};
 sudo chown -R vagrant:vagrant /data

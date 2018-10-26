@@ -1,0 +1,145 @@
+{
+    "____comment": "This file was generated with eosio-abigen. DO NOT EDIT Thu Oct 25 14:55:46 2018",
+    "version": "eosio::abi/1.0",
+    "structs": [
+        {
+            "name": "test_c",
+            "base": "testb",
+            "fields": [
+                {
+                    "name": "num",
+                    "type": "uint64"
+                }
+            ]
+        },
+        {
+            "name": "test_table2",
+            "base": "",
+            "fields": [
+                {
+                    "name": "owner",
+                    "type": "uint64"
+                },
+                {
+                    "name": "sec",
+                    "type": "uint64"
+                },
+                {
+                    "name": "third",
+                    "type": "uint64"
+                }
+            ]
+        },
+        {
+            "name": "testact_a",
+            "base": "",
+            "fields": [
+                {
+                    "name": "user",
+                    "type": "name"
+                },
+                {
+                    "name": "s",
+                    "type": "string"
+                },
+                {
+                    "name": "c",
+                    "type": "int32[]"
+                },
+                {
+                    "name": "sv",
+                    "type": "string[]"
+                }
+            ]
+        },
+        {
+            "name": "testactb",
+            "base": "",
+            "fields": [
+                {
+                    "name": "input",
+                    "type": "test_c"
+                },
+                {
+                    "name": "td",
+                    "type": "type_def"
+                },
+                {
+                    "name": "cc",
+                    "type": "int32?"
+                },
+                {
+                    "name": "d",
+                    "type": "bool"
+                }
+            ]
+        },
+        {
+            "name": "testb",
+            "base": "",
+            "fields": [
+                {
+                    "name": "field",
+                    "type": "float32"
+                }
+            ]
+        },
+        {
+            "name": "testtable",
+            "base": "",
+            "fields": [
+                {
+                    "name": "owner",
+                    "type": "uint64"
+                },
+                {
+                    "name": "third",
+                    "type": "uint64"
+                }
+            ]
+        }
+    ],
+    "types": [
+        {
+            "new_type_name": "type_def",
+            "type": "int32"
+        }
+    ],
+    "actions": [
+        {
+            "name": "testacta",
+            "type": "testact_a",
+            "ricardian_contract": ""
+        },
+        {
+            "name": "testactb",
+            "type": "testactb",
+            "ricardian_contract": ""
+        }
+    ],
+    "tables": [
+        {
+            "name": "testtab",
+            "type": "testtable",
+            "index_type": "i64",
+            "key_names": [],
+            "key_types": []
+        },
+        {
+            "name": "testtab2",
+            "type": "test_table2",
+            "index_type": "i64",
+            "key_names": [],
+            "key_types": []
+        },
+        {
+            "name": "testtaba",
+            "type": "testtable",
+            "index_type": "i64",
+            "key_names": [],
+            "key_types": []
+        }
+    ],
+    "ricardian_clauses": [],
+    "abi_extensions": []
+}
