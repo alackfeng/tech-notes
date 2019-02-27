@@ -50,10 +50,27 @@ AppRegistry.registerComponent(appName, () => App);
 
 <<<<======
 
+vi package.json ======>>>
+
+
+"postinstall": "rn-nodeify --install buffer,crypto,stream,util,process,vm --hack",
+
+<<<=====
+
 ###### 4. 运行项目
 
 react-native start
 react-native run-ios
+
+`````
+
+
+
+#### RN集成功能
+`````
+
+###### 1. 导航
+yarn add react-navigation
 
 `````
 
