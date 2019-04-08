@@ -34,6 +34,8 @@ yarn add tradle/rn-nodeify --dev
 ./node_modules/.bin/rn-nodeify --hack --install
 yarn install
 
+"postinstall": "rn-nodeify --install events,buffer,crypto,stream,util,process,vm --hack",
+
 vi index.js ======>>>>>
 
 // index.ios.js or index.android.js
@@ -118,6 +120,14 @@ react-native link react-native-randombytes
 
 yarn add tradle/rn-nodeify --dev
 ./node_modules/.bin/rn-nodeify --hack --install
+
+package.json ===>
+"scripts": {
+    "postinstall": "rn-nodeify --install events,buffer,crypto,stream,util,process,vm --hack",
+    "start": "node node_modules/react-native/local-cli/cli.js start",
+    "test": "jest"
+  },
+  
 
 // index.ios.js or index.android.js
 // make sure you use `import` and not require!  
